@@ -1,0 +1,61 @@
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.s-span{
+  color: #9a9a9a;
+  font-size: 18px;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.weizhi{
+    font-size: 20px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+#s-row{
+    margin-top: 26px;
+}
+.s-div{
+  position: relative;
+}
+.s-div>span{
+   width: 13px;
+  height: 13px;
+  border: 1px solid #333;
+  display: inline-block;
+  position: absolute;
+  top:5px;
+  left: 36px; 
+}
+.btn-danger{
+    margin-left: 20px;
+    background-color: #ed2f2e;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 40px;
+}
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td{
+    text-align: center;
+    font-weight: 400;
+}
+.table-bordered > tbody > tr > th{
+    font-size: 16px;
+    background-color: #2fa5e8;
+    color: #fff;
+}
+.table-bordered > tbody > tr > td{
+    font-size: 16px;
+}
+#gray{
+    background-color: #cdcdcd;
+    border: 1px solid #cdcdcd;
+}

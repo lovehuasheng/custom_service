@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/Security_Center.css?{$Think.config.html_version}">
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="row border_bottom header_row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header_title"><span class="img_01"></span><span> 当前位置：</span><span class="s-span">用户身份变更&gt;&gt;更改推荐人</span></div>
+        </div>
+        <div class="col-md-12 " style="margin-top:15px;">
+            <div class="input-group" style="width:400px;">
+            <span class="input-group-addon "><span class="glyphicon glyphicon-user"></span> 登录名</span>
+              <input type="text" class="form-control" placeholder="请输入用户登录名" id="queryUser">
+              <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" id="btnUser"><span class="glyphicon glyphicon-search"></span> 搜索</button>
+              </span>
+            </div><!-- /input-group -->
+        </div>
+        <div class="col-md-12 " style="margin-top:15px;" id="userinfo">
+            <div style="width:600px">
+            <div class="panel panel-primary">
+                <div class="panel-heading" flag="info-title">要修改的用户</div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>用户信息</td>
+                                <td flag="info-name">未选择用户</td>
+                                <input type="hidden" id="info-name" value=""/>
+                                <input type="hidden" id="info-id" value=""/>
+                            </tr>
+                            <!--<tr>
+                                <td>当前身份</td>
+                                <td flag="info-nickname">未选择用户</td>
+                            </tr>-->
+                            <tr>
+                                <td>当前推荐人</td>
+                                <td flag="r-name">未选择用户</td>
+                                <input type="hidden" id="rid" value=""/>
+                            </tr>
+                            <tr>
+                                <td>变更推荐人ID</td>
+                                <td><input type="text" id="rn_id" value=""/></td>
+                            </tr>
+                            <tr>
+                                <td>变更之后推荐人信息</td>
+                                <td flag="i-name">未选择用户</td>
+                                <input type="hidden" id="r_id" value=""/>
+                                <input type="hidden" id="r_username" value=""/>
+                                <input type="hidden" id="r_realname" value=""/>
+                            </tr>
+                            <!--<tr>
+                                <td>变动身份</td>
+                                <td><select flag="info-tonick"><option value="0">&nbsp;</option><option value="1">普通用户</option><option value="100">功德主</option><option value="400">B轮服务中心</option><option value="800">A轮服务中心</option></select></td>
+                            </tr>
+                            <tr>
+                                <td>变动日期</td>
+                                <td><input type="text" value="2016-10-29" id="info-date" flag="info-date" class="Wdate" onClick="WdatePicker()" style="height:30px;"/></td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                        <button class="btn btn-primary" type="button" id="btn1"><span class="glyphicon glyphicon-edit" id="truename"></span> 变动用户身份</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+	
+<!-- Modal -->
+<div class="modal fade" id="confirmDiv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">操作提醒</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        注意:修改之后，用户以及其上下级所属的团队的每月提成收入结算将受影响，你确认要修改否?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">算了，不修改</button>
+        <button type="button" class="btn btn-danger" id="btnUpdate">确定无误，修改该用户身份</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js?{$Think.config.html_version}"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/plug/My97DatePicker/WdatePicker.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/comm.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/reffer.js?{$Think.config.html_version}"></script>
+<script>
+	window._query_user="{:url('/change/change/search')}";
+        window._query_user_ref="{:url('/change/change/ref_search')}";
+	window._update_user="{:url('/change/change/do_change_ref')}";
+</script>
+

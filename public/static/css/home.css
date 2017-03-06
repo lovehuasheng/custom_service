@@ -1,0 +1,185 @@
+    body{
+        font-size: 16px;
+        font-family: "Microsoft YaHei";
+    }
+    /**我的工作**/
+    .context{
+        margin-left: 3px;
+    }
+    .container-fluid .header_row{
+        margin-top: 13px;
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .s-span{
+        color: #9a9a9a;
+    }
+    .border_bottom{
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+        padding-left: 85px;
+    }
+    .img_01{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: url(../images/jingling.png) 84px 0px;
+        position: relative;
+        top:6px;
+    }
+    /*内容*/
+    .statistics{
+        padding-left: 85px;
+        padding-top: 20px;
+    }
+    .statistics span{
+        display: inline-block;
+        padding-bottom: 20px;
+        font-size: 18px;
+    }
+    .statistics table thead tr td{
+       background: #4d708b;
+        font-size: 18px;
+        color: #fff;
+    }
+    .statistics table tbody tr td{
+        font-size: 16px;
+        text-align: center;
+    }
+    .dynamic_state{
+      padding-top: 20px;
+        font-size: 16px;
+    }
+    .dynamic_state .row span{
+        font-size: 18px;
+    }
+    .dynamic_state .row .more{
+        text-align: right;
+    }
+    .dynamic_state .row a{
+        color:#e20303;
+        font-size: 18px;
+    }
+    .dynamic_state .list-group-item:first-child {
+         border-top-left-radius: 0;
+         border-top-right-radius: 0;
+     }
+    .dynamic_state .list-group-item:last-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .list-group li:nth-child(odd){
+        background: #f1f1f1;
+    }
+    .dynamic_state .list-group{
+        margin-top: 20px;
+    }
+    .choice{
+        padding-left: 70px;
+    }
+    .choice select{
+        width:150px;
+        padding-left:50px;
+        font-size: 18px;
+    }
+    .can{
+        margin-top: 50px;
+        padding-left: 70px;
+    }
+    .can h3{
+        text-align: center;
+    }
+@media screen and (max-width: 1400px){
+    body{
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+    }
+    /**我的工作**/
+    .context{
+        margin-left: 3px;
+    }
+    .container-fluid .header_row{
+        margin-top: 13px;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    .s-span{
+        color: #9a9a9a;
+    }
+    .border_bottom{
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+        padding-left: 85px;
+    }
+    .img_01{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: url(../images/jingling.png) 84px 0px;
+        position: relative;
+        top:6px;
+    }
+    /*内容*/
+    .statistics{
+        padding-left: 85px;
+        padding-top: 20px;
+    }
+    .statistics span{
+        display: inline-block;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+    .statistics table thead tr td{
+        background: #4d708b;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+    }
+    .statistics table tbody tr td{
+        font-size: 14px;
+        text-align: center;
+    }
+    .dynamic_state{
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .dynamic_state .row span{
+        font-size: 16px;
+    }
+    .dynamic_state .row .more{
+        text-align: right;
+    }
+    .dynamic_state .row a{
+        color:#e20303;
+        font-size: 16px;
+    }
+    .dynamic_state .list-group-item:first-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .dynamic_state .list-group-item:last-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .list-group li:nth-child(odd){
+        background: #f1f1f1;
+    }
+    .dynamic_state .list-group{
+        margin-top: 20px;
+    }
+    .choice{
+        padding-left: 70px;
+    }
+    .choice select{
+        width:150px;
+        padding-left:50px;
+        font-size: 16px;
+    }
+    .can{
+        margin-top: 50px;
+        padding-left: 70px;
+    }
+    .can h3{
+        text-align: center;
+    }
+}

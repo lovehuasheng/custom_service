@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+        <meta name="author" content="董继">
+        <title></title>
+        <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+	    <link rel="stylesheet" href="/static/css/transfer.css?{$Think.config.html_version}">
+        <link rel="stylesheet" type="text/css" href="http://img01.shanxinhui.com.cn/kefu/static/css/lq.datetimepick.css?{$Think.config.html_version}"/>
+        <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/bootstrap.min.js"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+        <script src='http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}' type='text/javascript'></script>
+        <script src='http://img01.shanxinhui.com.cn/kefu/static/js/lq.datetimepick.js?{$Think.config.html_version}' type='text/javascript'></script>
+        <script src="/static/js/transfer.js"></script>
+        <style>
+             
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+        <!-- 头部公用样式 -->
+            <div class="row" id="s-row">
+                <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon6.png" alt=""><span class="weizhi">&#x3000;当前位置：</span><span class="s-span">&#x3000;我的工作&gt;&gt;查询付款超时</span>
+                <span class="s-spans">&gt;&gt;转账记录</span></div>
+            </div>
+        </div>
+        <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24" id="clude">
+            <select name="search_type" id="leixing">
+                    <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <select>    
+            <input id="text" type="text" class="search_name" placeholder="请输入ID" value="">
+            <span class="record_times">转单时间：</span><input type="text" id="form-control" name="datepicker" class="datetimepicker3 start">&nbsp;&nbsp;——&nbsp;&nbsp;
+            <input type="text"  id="form-controls" name="datepicker" class="datetimepicker3 end">
+            <button id="t-btn" class="search_submint">查询</button>
+        </div>
+         <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"  id="content">
+            <span class="current">当前数量：</span><span class="currents">000</span><span class="amount">转单总金额：</span><span class="amounts">000</span>
+            <table class="table table-striped table-bordered" id="table1">
+                    <tbody>
+                    <tr>
+                        <th colspan="3" style="text-align:center;">提供人</th>
+                        <th rowspan="2" style="text-align:center" >转单金额</th>
+                        <th rowspan="2" style="text-align:center">不打款原因</th>
+                        <th rowspan="2" style="text-align:center" >转单时间</th>
+                        <th rowspan="2" style="text-align:center">操作员</th>
+                    </tr>
+                    <tr>
+                        <th>订单ID</th>
+                        <th>姓名</th>
+                        <th>用户ID</th>
+                    </tr>
+                    </tbody>
+                    <tbody class="list_text"> 
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>  
+                    </tbody>
+            </table>
+         </div>
+         
+         
+    </body>
+    </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+    <title>客服系统</title>
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/zhuanbi.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/js/skin/layer.css?{$Think.config.html_version}" />
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <!-- 头部公用样式 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 success" ></div>
+        <div class="row border_bottom header_row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header_title"><span class="img_01"></span><span class="current"> 当前位置：</span><span class="s-span">我的工作&gt;&gt;转币功能&gt;&gt;转币</span></div>
+        </div>
+                <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-4 tanchu">
+                    <img src="/static/images/icon_14.png?{$Think.config.html_version}" alt="">
+                    <p class="zhuanbi"></p>
+                </div>
+        
+        <!-- 主体内容 -->
+        <div class="margin">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="top">
+                        <div style="margin-bottom: 40px">
+                        <section class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="padding-left: 0"><span >善种子：</span><span class="zhongzi"></span><span style="color: #e20101 !important;">个</span></section>
+                        <section class="col-lg-5 col-md-5 col-sm-5 col-xs-5"><span >善心币：</span><span  class="xinbi"></span><span style="color: #e20101 !important;">个</span></section>
+                        <section class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></section>
+                        </div>
+                        <br><span>币&#x3000;&#x3000;种:</span>
+                        <select id="bizhong">
+                        <option value="1" style="font-size: 18px">善种子</option>
+                        <option value="2" style="font-size: 18px">善心币</option>
+                    </select>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>类&#x3000;&#x3000;型:</span><select id="leixing">
+                        <option value="1" style="font-size: 18px">转出</option>
+                        <option value="2" style="font-size: 18px">回转</option>   
+                    </select>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>会员账号:</span><input type="text" class="user">
+                        <p class="p-name"><img src="/static/images/xingzhuang9.png?{$Think.config.html_version}" alt="">&nbsp;<span class="i-name"></span></p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>个&#x3000;&#x3000;数:</span><i class="glyphicon glyphicon-minus" style="left: 16px;"></i><input type="text" class="geshu" placeholder="仅支持数字哦">
+                        <i
+                            class="glyphicon glyphicon-plus"style="left: 5px;"></i></b><b style="color: #999;font-weight: 500;font-size: 18px" class='shangxian'>上限500个</b>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>二级密码:</span></span><input type="password" class="pass"><i class="glyphicon glyphicon-eye-open eye"></i>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span>备&#x3000;&#x3000;注:</span></span><input  rows="1" cols="26" class="remark"></input >
+                    </div>
+                    <p class="info">
+                        <button type="button" class="btn btn-info" data-toggle="modal" id="anniu" data-target="#myModal">确认</button>
+                    </p>
+
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 zb" style="margin-top: 0">转币记录：</div>
+                    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4" style="float:left;text-align: left;margin-top: 0" ><a class="look-over" href="/member/transfer_log/show_transfer_list">查看更多&gt;&gt;</a></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <table class="table table-striped tabs">
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+               <!--确认收款模态框-->
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="shanxinbi">你确定要向 <span class="monicker"> </span><span class='zhuanyi'></span> <span class="numbera"></span> <span class="q-ge">个</span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" style="margin-left: 24px;" id="queding">确定</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/zhuanbi.js?{$Think.config.html_version}"></script>
+<script src='http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}'></script>
+<script src='http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}' type='text/javascript'></script>
+<script id="temp" type="text/html">
+   <tr>
+      <td>{username}</td>
+      <td>{num}</td>
+      <td>{remark}</td>
+      <td>{create_time}</td>
+  </tr>
+</script>
+
+</body>
+</html>

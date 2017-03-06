@@ -1,0 +1,93 @@
+技术选型:
+redis + websocket+mongodb
+
+
+用户侧:
+数据结构:
+1.用户未读消息
+
+数据类型:
+sorted set(有序集合)
+键名:
+user:<userid>:msg:type:0  
+存储结构:
+{
+	score
+	msg_id //消息id,需要实现全局唯一
+}
+示例:
+{1,2,3,4...}
+
+2.最近消息
+数据类型
+sorted set(有序集合)
+键名
+user:<userid>:msg:type:1
+存储结构
+{
+	msg_id	//消息id,需要全局唯一
+}
+示例
+{1,2,3,4...}
+
+3.删除的消息
+数据类型
+sorted set(有序集合)
+键名:
+user:<userid>:msg:type:2
+存储结构
+{
+	msg_id //消息id,需要全局唯一
+}
+
+4.平台公告
+数据类型
+sorted set(有序集合)
+键名:
+user:<userid>:msg:type:3
+存储结构
+{
+	msg_id //消息id,需要全局唯一
+}
+
+
+5.消息实体
+数据结构
+hash(哈希)
+键名:
+msg:<msg_id>
+存储结构
+{
+	type:<msg_type> 			//消息类型
+	content:<content>			//消息内容
+	pub_time:<pubtime>			//消息发送的时间
+	valid_time:<start_time>		//有效起始时间
+	expire_time:<end_time>		//失效时间
+}
+
+管理员侧:
+数据类型:
+list(链表)
+键名
+admin:<adminid>:msg
+存储结构
+{
+	type:<msg_type>			//消息类型
+	content:<content>		//消息内容
+	receivers:<receivers>	//接收者列表,此处receivers为接收者id数组
+	pub_time				//发送时间
+	valid_time				//有效起始时间
+	expire_time				//失效时间
+}
+
+
+
+
+
+
+
+
+
+
+
+

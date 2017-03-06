@@ -1,0 +1,248 @@
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.s-span{
+  color: #9a9a9a;
+  font-size: 18px
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+.row{
+  font-size: 20px;
+}
+#s-row{
+    margin-top: 26px;
+    border-bottom: 1px solid #e5e5e5;
+     padding-bottom: 10px;
+     margin-left: 30px;
+}
+#colll{
+    margin-right: 63px;
+}
+.tishi{
+    font-size: 20px;
+    color: red;
+    margin-left: 20px;
+    display: none;
+}
+#text{
+    width: 160px;
+    line-height: 28px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+     margin-left: 20px;
+}
+select{
+    padding: 5px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+}
+#t-btn{
+    width: 80px;
+    line-height: 28px;
+    border-radius:5px;
+    background-color:#2fa5e8;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 26px;
+    margin-left: 40px;
+     border: 1px solid #2fa5e8;  
+}
+.match-span{
+    margin-left: 40px;
+    font-size: 20px;
+}
+ .table-bordered > tbody > tr > th{
+        text-align: center;
+        color: #f1f1f1;
+        font-size: 20px;
+        vertical-align: hidden;
+    }
+/*.table-bordered > thead > tr > th{
+   text-align: center;
+    color: #f1f1f1;
+    background-color:#2fa5e8;
+    font-size: 20px;
+    font-weight: 400;
+}*/
+.table-bordered > tbody > tr > td{
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+.huanyuan,.che,.fen{
+	width:28px;
+	height:28px;
+	display:inline-block;
+	background:url(../images/jingling.png) 0 0;
+	vertical-align: middle;
+}
+.img{
+	background:url(../images/jingling.png) 225px 0;
+}
+#t-table{
+    margin-top: 130px;
+}
+.row>div{
+    padding-right: 0;
+}
+#caozuo{
+    padding-left: 25px;
+}
+.modal-dialog{
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -200px;
+
+}
+.modal-body>img{
+  position: absolute;
+  top: 47px;
+  left: 146px;
+}
+.modal-body{
+    font-size: 24px;
+}
+#myModal .modal-content{
+  position: relative;
+}
+.modal-footer{
+    border: none;
+    text-align: center;
+ 
+}
+.modal-header{
+    background-color: #4d7084;
+    color: #fff;
+    text-align: center;
+}
+.modal-body>p:nth-child(1){
+    padding-top: 20px;
+    padding-left: 122px;
+    font-size: 17px;
+}
+.modal-body>p:nth-child(2){
+    font-size: 17px;
+    padding-left: 60px;
+}
+.modal-footer>button{
+    width: 80px;
+    font-size: 20px;
+}
+section{
+    padding-left: 45px;
+    font-size: 19px;
+}
+/*match-button{
+     position: absolute;
+    top: 230px;
+    left: 193px;
+}*/
+.table-bordered > tbody > tr > td>a{
+    font-size: 15px;
+}
+.shi>.icon-1{
+    display: none;
+}
+.shoukuan>.icon-1,.fou>.icon-2,.t-skf>.icon-1,.t-skf1>.icon-2{
+    display: none;
+}
+
+#clude{
+    position: fixed;
+    width: 100%;
+    height: 800px;
+    background-color: #333;
+    opacity: 0.9;
+    z-index: 20;
+    display: none;
+}
+.t-img{
+    width: 600px;
+    height: 600px;
+    position:absolute;
+    top:5%;
+    left: 24%;
+ 
+}
+.t-img>img{
+   width: 100%;
+   height: 100%;
+}
+.cuo{
+    width: 50px;
+    height: 50px;
+    color: red;
+    position: absolute;
+    top: 4%;
+    left: 60%;
+
+}
+.tiaozhuan{
+    border-radius: 5px;
+    width: 50px;
+    height: 28px;
+    padding: 0 5px;
+    border: 1px solid gray;
+     margin-left: 8px;
+     color: #428BCA;
+}
+#fenye{
+    width: 36px;
+    height: 28px;
+    padding: 0 3px;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+.dangqian,.zuida{
+    color: #333;
+    margin-left: 8px;
+}
+.payment{
+    margin:0 2px;
+}
+.t-tgr>.icon-1,.t-jsr>.icon-1{
+    display: none;
+}
+@media screen and (max-width: 1400px){
+    .table-bordered > tbody > tr > th{
+        text-align: center;
+        color: #f1f1f1;
+        font-size: 15px;
+        vertical-align: hidden;
+    }
+    .table-bordered > tbody > tr > td{
+        font-size: 13px;
+         vertical-align: hidden;
+    }
+    .table-bordered > tbody > tr > td > a{
+        vertical-align: hidden;
+        font-size: 13px;
+    }
+.cuo{
+    width: 50px;
+    height: 50px;
+    color: red;
+    position: absolute;
+    top: 4%;
+    left: 74%;
+
+    }
+}

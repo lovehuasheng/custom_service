@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>善心汇客服系统-我的工作</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- TODO 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- TODO 移动设计优先(响应式) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/common.css?{$Think.config.html_version}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-sm-11 col-md-11 col-sm-11 header_top">
+        <img src="http://img01.shanxinhui.com.cn/kefu/static/images/pic_4.png" alt="">
+    </div>
+</div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+        <div class="navbar-header col-lg-3 col-md-3 col-sm-3">
+            <div class="navbar-brand" >
+                    <span class="tu"></span>
+                    <label>超级管理员 : </label>
+                    <span>冯曼娜</span>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <ul class="nav navbar-nav send">
+                <li class="t1"><span></span><a href="#">工作开始</a></li>
+                <li class="t2"><span></span><a href="/member/sys_work/index">我的工作</a></li>
+                <li class="t3"><span></span><a href="#">统计报表</a></li>
+                <li class="t4 active"><span></span><a href="/permission/sys_group/index">团队管理</a></li>
+                <li class="t5"><span></span><a href="/user/user/index">系统管理</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="logo">
+        <span></span>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 header_left">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active left_neo">
+                <p></p>
+                <span></span>
+                <a href="#">设置用户组</a>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-11 col-md-11 col-sm-11" id="toggle">
+        <iframe src="/permission/sys_group/show_group_list" frameborder="0" id="iframe"></iframe>
+    </div>
+</div>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.11.3.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/tream.js?{$Think.config.html_version}"></script>
+</body>
+</html>

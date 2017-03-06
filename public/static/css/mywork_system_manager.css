@@ -1,0 +1,335 @@
+/*公共*/
+*{
+    padding:0;
+    margin: 0;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    font-family:"Microsoft YaHei";
+}
+.home{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.navigation{
+    background-color: #272727;
+    padding: 0;
+    margin: 0;
+}
+.navigation .nav_left{
+    line-height: 80px;
+    padding-left: 90px;
+    font-size: 18px;
+    vertical-align: text-bottom;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 95px;
+}
+.navigation .nav_left img{
+    vertical-align: text-bottom;
+}
+.list,.nav_left,.home div{
+    margin: 0;
+    padding: 0;
+}
+.navigation .list ul {
+    list-style: none;
+    width:100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height:79px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.navigation .list ul li{
+    float: left;
+    width:13%;
+    height:80px;
+    border-left:1px solid #fff;
+}
+.navigation .list ul li:hover{
+    background-color: #e20101;
+}
+.navigation .list ul li a{
+    color:#fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navigation .list ul li span{
+    display: inline-block;
+    margin-top: 5px;
+    width:45px;
+    height:45px;
+}
+.navigation .list ul li span:nth-child(1){
+    background: url(../images/icon5.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(2) {
+    background: url(../images/icon4.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(3) {
+    background: url(../images/icon3.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(4) {
+    background: url(../images/icon2.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(5) {
+    background: url(../images/icon1.png) center center no-repeat;
+}
+
+#iframe{
+    width: 100%;
+    height: 800px;
+}
+/*TODO 预留左侧导航栏*/
+.left_nav{
+    padding-top:90px;
+    background-color:#272727;
+}
+.col-sm-11,{
+    padding-left: 0;
+}
+.col-lg-1, .col-md-1{
+    padding-right: 0;
+}
+.left_nav a{
+    color:#fff;
+}
+.radius{
+    width:140px;
+    height:140px;
+    background-color: #272727;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 140px;
+    position: absolute;
+    top:43px;
+    left:0;
+    z-index: 9;
+}
+.current{
+    width:100%;
+    padding-left: 90px;
+    background-color:#272727;
+    height:60px;
+    line-height: 60px;
+    margin: 0;
+
+}
+.current p{
+    background-color: #fff;
+    padding-left: 90px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    color:#999;
+}
+.current p img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.current p b{
+    font-size: 18px;
+    color:#111;
+    margin-right: 30px;
+}
+.current p a {
+    color: #999;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #f00;
+    color: #fff;
+}
+.nav-pills>li>a {
+    border-radius: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+
+}
+.left_nav .nav  li{
+    text-align: center;
+}
+.content .nav .ts1 p{
+    width:90px;
+    height:1px;
+    background: url(../images/newicon_1.png) center center no-repeat;
+}
+.nav-pills>li.active, .nav-pills>li.active:focus, .nav-pills>li.active:hover {
+    color: #fff;
+     background-color: #f00;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #f00;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.content .nav .ts1 span{
+    padding-top: 40px;
+    padding-left:95px;
+    display: block;
+    width:36px;
+    height:31px;
+    background: url(../images/newicon_2.png) center center no-repeat;
+}
+.content .nav .ts2 span{
+    padding-top: 40px;
+    padding-left:95px;
+    display: block;
+    width:36px;
+    height:31px;
+    background: url(../images/newicon_3.png) center center no-repeat;
+}
+.content .nav .ts2 p{
+    width:90px;
+    height:1px;
+    background: url(../images/newicon_1.png) center center no-repeat;
+}
+/*TODO 主体内容*/
+.context{
+    margin-left:90px;
+}
+.crumbs{
+    width:25%;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-left: 70px;
+    margin-bottom: 37px;
+}
+.crumbs span{
+    float: left;
+    margin-right: 10px;
+    line-height: 30px;
+}
+.crumbs select{
+    width:50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+}
+.task,.task>p{
+    padding: 0;
+    font-size: 18px;
+    font-weight:normal;
+}
+.task p label{
+    font-weight:normal;
+}
+.task p span{
+    color:#f00;
+}
+.an{
+    margin-left: 128px;
+    margin-top: 75px;
+    padding-left: 26px;
+}
+.btn{
+    width:80px;
+    border-radius: 2px;
+    font-size: 20px;
+    padding: 4px 10px;
+}
+.gezi{
+    margin-left: 90px;
+}
+.table_list1,.table_list2,.table_list3{
+    padding: 0;
+    text-align: center;
+}
+.table_list1 table{
+    border-collapse: collapse;
+    border:1px solid #ccc;
+}
+.table_list1 thead tr th{
+    border:1px solid #ccc;
+    background-color: #4d6f8b;
+    height:35px;
+    line-height: 35px;
+    font-size: 16px;
+    color:#fff;
+    text-align: center;
+}
+.table_list1 tbody tr td{
+    border:1px solid #ccc;
+}
+.table_list2 thead tr th{
+    border:1px solid #ccc;
+    background-color: #4d6f8b;
+    height:35px;
+    line-height: 35px;
+    font-size: 16px;
+    color:#fff;
+    text-align: center;
+}
+.table_list2 tbody tr td{
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.table_list2 tbody tr td span{
+    cursor: pointer;
+    color:#6999d2;
+}
+.table_list3 thead tr th{
+    border:1px solid #ccc;
+    background-color: #4d6f8b;
+    height:35px;
+    line-height: 35px;
+    font-size: 16px;
+    color:#fff;
+    text-align: center;
+}
+.table_list3 tbody tr td{
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/**TODO 搜索弹出框*/
+#myModalLabel,#myModalLabel2{
+    text-align: center;
+    color:#fff;
+    font-size: 24px;
+}
+.modal-header{
+    background-color: #4d6f8b;
+}
+span[aria-hidden="true"] {
+    color:#fff;
+}
+.modal-content{
+    border-radius: 2px;
+}
+#optionsRadios1{
+    margin-right: 50px;
+}
+#optionsRadios2,#optionsRadios4,#optionsRadios7,#optionsRadios8,#optionsRadios9{
+    margin-right: 10px;
+}
+#optionsRadios5{
+    margin-right: 25px;
+}
+#optionsRadios3,#optionsRadios6{
+    margin-right: 38px;
+}
+.modal-footer{
+    text-align: center;
+    border: none;
+    padding-right: 60px;
+}
+.modal-footer .btn{
+    width:126px;
+}
+.form-control{
+    border-radius:0;
+}
+.modal-footer .tolerant{
+    margin-right: 80px;
+}
+/*TODO 查看弹出框*/
+.checkbox-inline{
+    text-align: right;
+}
+
+

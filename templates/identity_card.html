@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>客服审核</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- TODO 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- TODO 移动设计优先(响应式) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/card.css?{$Think.config.html_version}"/>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+</head>
+<body>
+	
+    <div class="user">
+        <label>姓名 : </label><span>阿拉蕾</span><br>
+        <label>身份证号码 : </label><span>1323456464654654645</span>
+		<p class="head"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/line_1.png" alt="" /></p>
+    </div>
+    <div class="picture ">
+			<img src="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.jpg" preview="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.png" style="width:364px;height:220px;z-index:1" id="tp1"/>
+			<p class="tuans"></p>
+            <img src="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.jpg" preview="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.png" style="width:364px;height:220px;z-index:1" id="tp2"/>
+			<p class="tuans"></p>
+            <img src="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.jpg" preview="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.png" style="width:364px;height:220px;z-index:1" id="tp3"/>
+			<p>
+				<span>正面照</span>
+				<span>反面照</span>
+				<span id="send">手持身份证照</span>	
+			</p>
+    </div>   
+
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/card.js?{$Think.config.html_version}"></script>
+</body>
+</html>
+<script type="text/html" id="jstemp">
+		<div f="child" style="position:absolute;width:{w}px;height:{h}px;overflow:hidden;z-index:999;display:none" >
+				<div f="box"  style="position:absolute;">
+					<img src="{preview}"  style=""/>
+				</div>
+		</div>
+		
+
+
+
+
+
+
+
+</script>

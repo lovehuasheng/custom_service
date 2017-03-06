@@ -1,0 +1,666 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color: #5bc0de;
+    border:0;
+}
+li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+textarea{
+    resize:none;
+    overflow-y:scroll; 
+    font-size: 16px;
+    line-height:20px;
+}
+p{
+    margin:0;
+}
+#mybianji .modal-body{
+    margin-left: 0px;
+}
+.opt-card{
+    font-size: 18px;
+}
+#gx{
+    display: none;
+}
+#Date{
+    width:103px;
+}
+.fenpai{
+    margin-left: 677px;
+}
+.pages_Code{
+    display: none;
+    margin-top:16px;
+}
+.pageCode{
+    width:70px;
+}
+#Dateover{
+    width:25%;
+}
+.page_sta,.page_end{
+    width:100px;
+}
+#tcd{
+    text-align: center;
+}
+.open{
+    float:right;
+    margin-top:6px;
+    color:#f00;
+    cursor:pointer;
+    display: none;
+}
+.zhipai{
+    padding-left:60px;
+}
+.row{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.mun{
+    margin-top: 4px;
+}
+.s-span{
+  color: #9a9a9a;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+.ipt{
+    margin-top: 20px;
+}
+.look{
+    cursor: pointer;
+    color: #31b0d5;
+}
+.caozuo{
+    display: inline-block;
+    color: #31b0d5;
+    cursor: pointer;
+}
+.img_02{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    background: url(../images/jingling.png) 0px 0px;
+    top:6px;
+}
+.form-horizontal .control-label{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn-info,.btn-danger{
+    border: 0;
+}
+.table{
+    margin-top: 5px;
+}
+.table-bordered > tbody > tr > th{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fdffff;
+  height: 50px;
+  line-height: 50px;
+  padding:0;
+}
+.table-bordered > tbody > tr > td{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fdffff;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.table-bordered > tbody > tr > td{
+  color: #333;
+}
+.table-bordered > tbody > tr > th{
+  background-color: #4d7086;
+}
+.header_title{
+    margin-left: 30px;
+}
+/*推荐人和隶属组 审核*/
+#myModal .table{
+    margin-top: 20px;
+}
+.modal-header{
+    text-align: center;
+    background: #4d708b;
+    color: #fff; 
+}
+.modal-header h4{
+    font-size: 24px;
+}
+/*照片*/
+#imgs{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(255,255,255,1);
+    z-index:2000;
+}
+.users{
+    width:70%;
+    padding-left:110px;
+    text-align:left;
+    height:100px;
+    line-height:40px;
+    font-size:28px;
+    position:fixed;
+    top:1px;
+    left:230px;
+    z-index:9999;
+    color:#fff;
+    display:none;
+    z-index: 99999;
+}
+.out{
+    width:100px;
+    height:100px;
+    display:inline-block;
+    position:fixed;
+    top:-50px;
+    left:1167px;
+    background:#ccc;
+    color:#fff;
+    border-radius:50%;
+    line-height:130px;
+    font-size:50px;
+    padding-left:10px;
+    cursor:pointer;
+}
+#main{
+    width:1300px;
+    height:300px;
+}
+#main img{
+    width:300px;
+    height:200px;
+    float:left;
+    margin-right:50px;
+}
+/*弹出框距离顶部样式*/
+.modal-body{
+    font-size: 20px;
+    line-height: 50px;
+    margin-left: 100px;
+}
+.modal-body i{
+    font-style:normal;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/*编辑资料*/
+#mybianji .modal-content {
+    width:865px;
+    left:50%;
+    margin-left: -432px;
+}
+#mybianji .modal-body{
+    line-height: 30px;
+}
+#mybianji p {
+    margin: 0;
+    margin-left: 10px;
+}
+#mybianji .modal-footer{
+    text-align: left;
+    border:0;
+}
+#mybianji .row{
+    margin:0;
+}
+#mybianji .row div input{
+    margin-bottom: 24px;
+}
+#mybianji .row div span{
+    width:95px;
+    display: inline-block;
+}
+#mybianji .modal-footer .btn{
+    text-align: center;
+    margin-left: 385px;
+    display: block;
+    margin-top: 20px;
+}
+#mybianji .modal-footer .btn-danger{
+    margin-left: 370px;
+}
+#mybianji #beizhujilu{
+   position: relative;
+   top: -30px;
+}
+.bianji_jilu{
+    display: inline-block;
+    width:339px;
+    height: 82px;
+    border: 1px solid #ccc; 
+    overflow-y:scroll; 
+}
+.beizhu{
+    display: none;
+}
+.beizhu_1,.beizhu_a,.beizhu_b{
+    margin-left: 130px;
+    margin-top: 20px;
+}
+.beizhu_1 textarea,.beizhu_a textarea,.beizhu_b textarea{
+    resize:none;
+    overflow-y:scroll; 
+}
+#mybianji .beizhu_1 span{
+    position: relative;
+    top:-20px;
+}
+#mybianji .beizhu{
+    display: none;
+}
+#qbzhipai{
+    margin-left: 96px;
+    margin-top: 20px;
+}
+#qbzp{
+    margin-bottom: 20px;
+    height: 30px;
+}
+/*转移推荐人*/
+.input_tuijian{
+    height: 30px;
+}
+.tuijian{
+    margin-left: 20px;
+}
+.tuijian_span_01{
+    color: #e30300;
+}
+#mytuijianren .btn{
+    margin-left: 140px;
+    margin-top:50px;
+    margin-bottom: 30px;
+}
+#mytuijianren .btn-danger{
+    margin-left: 125px;
+}
+.tuijian_beizhu textarea{
+    resize:none;
+    overflow-y:scroll; 
+}
+.tuijian_beizhu span{
+    position: relative;
+    top:-15px;
+}
+.zhuanyi_tijiao{
+    display: block;
+}
+.tuijian_beizhu{
+    margin-left: -5px;
+}
+.tuijian_beizhujilu{
+    margin-left: -19px;
+     display: none;
+}
+.tongzhi_jilu{
+    border:1px solid #aaa;
+    height: 82px;
+    width: 332px;
+    overflow-y: scroll;
+    display: inline-block;
+}
+/*审核*/
+#myshenhe .btn{
+    margin-left: 146px;
+}
+.img{
+    background: url(../images/jingling.png) 225px 0px;
+}
+
+/*通知*/
+.tongzhi_beizhu textarea{
+    resize:none;
+    overflow-y:scroll; 
+    font-size: 16px;
+    line-height:20px;
+}
+#mytongzhi .tongzhi_beizhu span{
+    position: relative;
+    top:-20px;
+    color:#e20401;
+}
+#mytongzhi .btn-danger{
+    margin-left: 215px;
+    margin-bottom: 20px;
+}
+#mytongzhi .modal-body{
+    line-height: 20px;
+    margin-left:20px;
+}
+.tongzhi_beizhu{
+    margin-bottom: 10px;
+}
+#mytongzhi .shenhetongzhi{
+    margin:20px 0;
+}
+.shenhetongzhi_name{
+    color: #e20401;
+}
+.btn-primary{
+    margin-left: 230px;
+    margin-top: 20px;
+}
+.body_title{
+    margin-left:100px; 
+}
+.body_title p{
+    line-height: 40px;
+}
+.tongzhi_jilus{
+    display: none;
+    position: relative;
+}
+.tongzhi_jilus .jilu{
+    position: relative;
+    top:-36px;
+    color: #f00;
+}
+.tongzhi_jilus .tongzhi_text{
+    height: 82px;
+    width: 332px;
+    overflow-y: scroll;
+    display: inline-block;
+    border:1px solid #aaa;
+}
+.jitiyuanyin{
+    position: relative;
+    margin-top: 10px;
+}
+.jitiyuanyin span{
+    position: relative;
+    top:-20px;
+}
+/*特权*/
+#mytequan .modal-body{
+    margin:0;
+}
+#mytequan .modal-body .btn{
+    margin-left: 239px;
+    margin-bottom: 20px;
+}
+.tequan_beizhu,.rengyi,.tekun{
+    margin-left: 100px;
+}
+
+.tequan_tongzhi_jilu{
+    width: 322px;
+    height: 82px;
+    border:1px solid #aaa;
+    overflow-y:scroll; 
+    display:inline-block;
+}
+.tequan_tongzhi_jilu p{
+    line-height: 20px;
+}
+.jl{
+    margin-left: 100px;
+    position: relative;
+    top: -34px;
+}
+.tequan_beizhu span{
+    position: relative;
+    top:-23px;
+}
+.col{
+    color:#e20401;
+}
+#mytequan .modal-body .btn2{
+    margin-left: 258px;
+}
+
+/*封号*/
+#myfenghao .modal-body{
+    margin:0;
+}
+.fenghao_span{
+    margin-left: 100px;
+    position: relative;
+    top: -32px;
+    color: #f00;
+}
+.fenghao_beizhujilu{
+     display: none;
+}
+.fenghao_tongzhi_jilu{
+    width: 322px;
+    height: 82px;
+    border: 1px solid #aaa;
+    overflow-y: scroll;
+    display: inline-block;
+    overflow-x: hidden;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 10px;
+	margin-left:10px;
+}
+.fenghao_tongzhi_jilu p{
+    line-height: 20px;
+}
+#myfenghao .modal-body .btn{
+    margin-left: 239px;
+    margin-bottom: 20px;
+}
+.tequan_beizhu,.rengyi{
+    margin-left: 100px;
+}
+.tekun{
+    line-height: 20px;
+    margin: 20px 0;
+    margin-left: 100px;   
+}
+#myfenghao .dongjie{
+    line-height: 20px;
+    margin: 20px 0 20px 100px;
+}
+.tequan_beizhu span{
+    position: relative;
+    top:-23px;
+	display:inline-block;
+	width:100px;
+}
+.col{
+    color:#e20401;
+}
+#myfenghao .modal-body .btn2{
+    margin-left: 258px;
+}
+.datetimepicker3{
+    display: inline-block;
+}
+.time button{
+    position: relative;
+    top:-3px;
+}
+.sousuo{
+    margin-left: 100px;
+}
+.number .num{
+    color: #f00;
+}
+#myzhipai .modal-body input{
+    height: 30px;
+}
+#myzhipai .modal-body button{
+    display: block;
+    margin-left: 150px;
+}
+@media screen and (max-width: 1400px){
+    #mybianji .modal-footer .btn-danger {
+        margin-left: 325px;
+    }
+    #mybianji .modal-footer .btn {
+        text-align: center;
+        margin-left: 345px;
+        display: block;
+        margin-top: 20px;
+    }
+    /*照片*/
+    #imgs{
+        display:none;
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:rgba(255,255,255,1);
+        z-index:2000;
+    }
+    .users{
+        width:70%;
+        padding-left:110px;
+        text-align:left;
+        height:100px;
+        line-height:40px;
+        font-size:28px;
+        position:fixed;
+        top:1px;
+        left:230px;
+        z-index:9999;
+        color:#fff;
+        display:none;
+    }
+    .out{
+        width:100px;
+        height:100px;
+        display:inline-block;
+        position:fixed;
+        top:-50px;
+        left:1167px;
+        background:#ccc;
+        color:#fff;
+        border-radius:50%;
+        line-height:130px;
+        font-size:50px;
+        padding-left:10px;
+        cursor:pointer;
+    }
+    #main{
+        width:1300px;
+        height:300px;
+    }
+    #main img{
+        width:300px;
+        height:200px;
+        float:left;
+        margin-right:50px;
+    }
+    .table-bordered > tbody > tr > th{
+          text-align: center;
+          font-size: 16px;
+          font-weight: 400;
+          height: 40px;
+          line-height: 40px;
+          padding:0;
+    }
+    .table-bordered > tbody > tr > td{
+         text-align: center;
+          font-size: 15px;
+          font-weight: 400;
+          padding: 0;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: hidden;
+    }
+    .ipt_02{
+        width:150px;
+    }
+    .spa{
+        font-size: 16px;
+    }
+    #mytongzhi .body_title p{
+        margin:10px 0;
+    }
+    .modal-header{
+        text-align: center;
+        background: #4d708b;
+        color: #fff; 
+        padding:10px 0;
+    }
+    .modal-header h4{
+        font-size: 20px;
+    }
+
+    /*弹出框距离顶部样式*/
+    .modal-body{
+/*        margin-left: 150px;*/
+        font-size: 16px;
+        line-height: 35px;
+    }
+    #quanzhipai .p1{
+        margin-left: 57px;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .modal-body i{
+        font-style:normal;
+        font-size: 13px;
+        color: #ccc;
+    }
+    span[aria-hidden=true]{
+        margin-right: 8px;
+    }
+    #mybianji .row div input{
+        margin-bottom: 16px;
+    }
+    #mybianji .modal-content {
+        width:800px;
+        left:50%;
+        margin-left: -432px;
+    }
+    .beizhu_1 span{
+        font-size: 16px;
+    }
+    .fenpai{
+        margin-left: 237px;
+    }
+}
+
+.bianji_hyzh{
+    font-size: 14px;
+    line-height: 31px;
+    border-radius: 5px;
+    border: 1px solid #d3dcdd;
+    margin-left: 13px;
+}

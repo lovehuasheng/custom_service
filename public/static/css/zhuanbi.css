@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"微软雅黑";
+}
+a{
+    text-decoration: none;
+    border:0;
+}
+a:hover{
+    text-decoration: none;
+    border:0;
+    color: #e20101;
+}
+li{
+    list-style: none;
+}
+input{
+    outline: none;
+    margin-left: 20px;
+}
+textarea{
+    resize:none;
+    overflow-y:scroll; 
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+#bizhong{
+    margin-left: 14px;
+}
+p{
+    margin:0;
+}
+.row{
+  font-size: 20px;
+}
+.row>div:nth-child(1){
+    margin-top: 0;
+}
+#top{
+    margin-top: 0 ;
+}
+.container-fluid{
+    padding-left: 0;
+}
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.s-span{
+  font-size: 16px;
+  color: #999;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+.ipt{
+    margin-top: 20px;
+}
+.look{
+    cursor: pointer;
+    color: #31b0d5;
+}
+.caozuo{
+    display: inline-block;
+    color: #31b0d5;
+    cursor: pointer;
+}
+.img_02{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    background: url(../images/jingling.png) 0px 0px;
+    top:6px;
+}
+.form-horizontal .control-label{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn-info,.btn-danger{
+    border: 0;
+}
+
+.header_title{
+    margin-left: 30px;
+}
+.current{
+    font-size: 18px;
+    color: #111;
+}
+
+/*内容*/
+.margin {
+  margin-left:153px;
+}
+.row div{
+  margin-top: 20px;
+}
+.header_row {
+  margin-top: 0;
+}
+.margin div span{
+  width: 120px;
+  font-size: 20px;
+  color: #333;
+}
+.geshu{
+  width:100px;
+  margin-left: 24px;
+  font-size: 14px;
+  line-height: 30px;
+}
+.password{
+  padding-right: 30px;
+  width:247px;
+}
+.eye {
+  position: relative;
+  left:-25px;
+  top:3px;
+}
+.btn{
+  margin-top: 48px;
+  margin-left: 139px;
+  line-height: 23px;
+  width: 121px;
+  color: #fafafa;
+}
+/*select大小*/
+select{
+    line-height: 36px;
+    width: 120px;
+    font-size: 18px;
+    margin-left: 20px;
+    padding: 1px;
+}
+select>option{
+    font-size: 18px;
+}
+
+/*弹出框*/
+.chenggong{
+  width:400px;
+  height: 300px;
+  position: absolute;
+  top:10%;
+  left: 50%;
+  margin-left: -200px;
+  text-align: center;
+  border:1px solid #333;
+  display: none;
+  background: #fff;
+}
+.chenggong img{
+  margin-top: 50px;
+}
+.chenggong p {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #f00;
+  margin-left: 5px;
+}
+/*查看更多样式*/
+.look-over{
+    font-size: 20px;
+    color: #e20101;
+    float: right;
+}
+#anniu{
+    background-color: #2ea4eb;
+}
+/*table样式*/
+table{
+    text-align: center;
+    margin-right: 90px;
+    border: 1px solid #DDDDDD;
+}
+
+.zhongzi,.xinbi{
+    color: #e20101 !important;
+}
+.p-name{
+    margin-left: 103px;
+    margin-top: 10px;
+}
+.tishi{
+    font-weight: 500;
+}
+.zb{
+    font-size: 20px;
+    color: #333;
+}
+.table > tbody > tr > td{
+    line-height: 28px;
+    font-size: 18px;
+}
+.modal-header{
+    background-color: #4d708b;
+    color: #fff;
+    text-align: center;
+}
+.modal-body{
+    text-align: center;
+  
+}
+.modal-footer{
+      border-top: none;
+      text-align: center;
+}
+.modal-body>p{
+    font-size: 20px;
+}
+.shanzhongzi{
+    display: none;
+}
+.shanzhongzi,.shanxinbi{
+    margin-top:50px;
+}
+#myModal .monicker,#myModal .numbera{
+    color: #e20101;
+}
+.i-name{
+    font-size: 16px !important;
+    color: #333;
+}
+.shangxian{
+  margin-left: 20px;
+}
+.margin .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f1f1f1;
+}
+.p-name{
+  display: none;
+}
+/*弹出成功框*/
+.tanchu{
+    width:552px;
+    height: 348px;
+    background-color: #fff;
+    z-index: 4;
+    position: fixed;
+    top: calc(39% - 162px);
+    left: calc(50% - 262px);
+    display: none;
+}
+.tanchu>p{
+     font-size: 24px;
+     color: #e20101;
+     position: absolute;
+     top: 216px;
+     left: 228px;
+}
+.tanchu>img{
+    position: absolute;
+    top: 70px;
+    left: 217px; 
+}
+.success{
+    z-index: 2;
+    position: fixed;
+    opacity: 0.7;
+    height: 800px;
+    background-color: #333;
+    display: none;
+}
+.modal-dialog{
+    width: 600px;
+    margin: 73px auto;
+}
+#tabs>tr>td{
+  line-height:44px; 
+}
+@media screen and (max-width: 1400px) {
+    .table > tbody > tr > td{
+        line-height: 28px;
+        font-size: 16px;
+    }
+    .look-over{
+        font-size: 18px;
+        color: #e20101;
+    }
+    .zb{
+    font-size: 18px;
+    color: #333;
+    }
+    textarea{
+        resize:none;
+        overflow-y:scroll; 
+        font-size: 16px;
+        line-height:30px;
+        margin-left: 20px;
+    }
+
+}

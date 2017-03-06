@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+        <title></title>
+        <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+        <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+        <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+        <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/manual.css?{$Think.config.html_version}">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <!-- 头部公用样式 -->
+            <div class="row" id="s-row">
+                <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon6.png" alt=""><span class="weizhi">&#x3000;当前位置：</span><span class="s-span">&#x3000;我的工作&gt;&gt;手动匹配列表</span></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-18 col-xs-18" id="button1">
+                    <button type="button" class="btn btn-danger"  class="btn  btn-danger" id="del" style="margin-left:0" val="1">删除选中</button>
+                    <button type="button" id="set_match" class="btn  btn-danger" >生成匹配列表</button>
+                    <button type="button" id="set_verify" class="btn">审核选中</button>
+                    <button type="button" id="refresh" class="btn btn-danger">刷新</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24" id="m-table1">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                        <form id="myForm">
+                            <table class="table table-responsive table-bordered" id="table1">
+                                <tbody>	
+                                    <tr>
+                                        <th colspan="6" style="text-align:center;background-color:#2fa5e8;color:#fff">提供人</th>
+
+                                    </tr>
+                                    <tr>
+                                        <th style="background-color:#2fa5e8;color:#fff">全选&nbsp;<input type="checkbox" class="super_check"></td>
+                                        <th style="text-align:center;background-color:#2fa5e8;color:#fff">订单ID</td>
+                                        <th style="text-align:center;background-color:#2fa5e8;color:#fff">姓名</td>
+                                        <th style="text-align:center;background-color:#2fa5e8;color:#fff">用户ID</td>
+                                        <th style="text-align:center;background-color:#2fa5e8;color:#fff">提供总金额</td>
+                                        <th style="text-align:center;background-color:#2fa5e8;color:#fff" class="match_money_html">待匹配金额</td>
+
+                                    </tr>
+                                </tbody>
+                                <tbody class="list_text">                       
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >	
+
+                        <table class="table table-responsive table-bordered" id="table2">
+                            <tbody>
+                                <tr>
+                                    <th colspan="5" style="text-align:center;background-color:#2fa5e8;color:#fff">接收人</th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align:center;background-color:#2fa5e8;color:#fff">订单ID</td>
+                                    <th style="text-align:center;background-color:#2fa5e8;color:#fff">姓名</td>
+                                    <th style="text-align:center;background-color:#2fa5e8;color:#fff">用户ID</td>
+                                    <th style="text-align:center;background-color:#2fa5e8;color:#fff">接收总金额</td>
+                                    <th style="text-align:center;background-color:#2fa5e8;color:#fff" class="match_money_html">待匹配金额</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="lists_text">
+                            </tbody>	
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_14.png" alt="">
+                        <p>加入手动匹配列表成功</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery.page.js?{$Think.config.html_version}"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+        <!--<script src="/static/js/public.js"></script>-->
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/manual.js?{$Think.config.html_version}"></script>
+        <script src="http://img01.shanxinhui.com.cn/kefu/static/js/error.js?{$Think.config.html_version}"></script>
+    </body>
+
+</html>

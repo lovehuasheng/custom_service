@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>客服审核</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- TODO 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- TODO 移动设计优先(响应式) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/js/skin/layer.css?{$Think.config.html_version}"/>
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/layer.css?{$Think.config.html_version}"/>
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/work.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/picbox.css?{$Think.config.html_version}" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="http://img01.shanxinhui.com.cn/kefu/static/css/lq.datetimepick.css?{$Think.config.html_version}"/>
+    <script type="text/javascript" src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery.min.js?{$Think.config.html_version}"></script>
+    <script type="text/javascript" src="http://img01.shanxinhui.com.cn/kefu/static/js/picbox.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}' type='text/javascript'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/lq.datetimepick.js?{$Think.config.html_version}' type='text/javascript'></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/work3.js?{$Think.config.html_version}"></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/jquery.pages.js?{$Think.config.html_version}'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}'></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--TODO 主体内容-->
+	<div class="row border_bottom header_row ">
+            <div class=" header_title"><span class="img_01"></span><span> 当前位置：</span><span class="s-span">我的工作&gt;&gt;工作区</span></div>
+    </div>
+    <div class="crumbs row " >
+       <div class="shi col-lg-5 col-md-5 col-sm-5">
+        <span>选择时间 :</span>
+        <input type="text" name="datepicker" class="datetimepicker3 zuce_end" class="form-control"  id="zuce_end" onfocus="newday('zuce_end')" />
+        <div class="que">确定</div>
+       </div>
+    </div>
+    <div  class="row context">
+        <div class="col-lg-5 col-md-5 col-sm-5 task">
+            <p class="col-lg-4 col-md-4 col-sm-4"><label>今日任务量 :&nbsp;</label><span class="total"></span></p>
+            <p class="col-lg-4 col-md-4 col-sm-4"><label>审核次数 :&nbsp;</label><span class="completed"></span ></p>
+            <p class="col-lg-4 col-md-4 col-sm-4"><label>当前数量 :&nbsp;</label><span class="unfinished"></span></p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-sm-offset-2  col-md-offset-2 col-lg-offset-2 an ">
+            <span >审核状态 : </span>
+            <select class="oppo">
+               <option value="">请选择</option>
+               <option value="0">未审核</option>
+               <option value="1">未通过</option>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 ">
+            <button type="button" class="btn btn-info search"  flag="seek_btn">搜索</button>
+            <button type="button" class="btn btn-danger update">刷新</button>
+        </div>
+    </div>
+    <div class=" row gezi ">
+        <div class="table_list1">
+            <table class="table table-bordered ">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>会员账号</th>
+                    <th>姓名</th>
+                    <th>激活状态</th>
+                    <th>审核状态</th>
+					<th colspan=3>操作</th>
+					<th>更新状态</th>
+                    <th class="order" flag="update_time">
+						资料更新时间
+						 <span class="glyphicon glyphicon-arrow-up up" flag="0"></span>
+						 <span class="glyphicon glyphicon-arrow-down down" flag="1"></span>
+                     </th>
+                    <th class="order" flag="create_time">
+						注册时间
+						 <span class="glyphicon glyphicon-arrow-up up" flag="0"></span>
+						 <span class="glyphicon glyphicon-arrow-down down" flag="1"></span>
+					</th>
+                </tr>
+                </thead>
+                <tbody class="tbody1">
+						
+                </tbody>
+            </table>
+        </div>
+		<div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 tcdPageCode" id="tcd"></div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pages_Code"> 
+            <input type="text" class="pageCode">
+            <button type="button" class="btn btn-info PagesCode">Go</button> 
+          </div>
+        </div>
+    </div>
+<!--照片弹出-->
+<div id="imgs">
+	<div class="out">×</div>
+	<div id="main">
+		<p id="tp1">
+            <a href="" rel="lightbox"  >
+                <img  src="" id="tp4" title="img"  alt='图片不全或图片缺失,请勿点击' />
+            </a>
+        </p>
+		<p id="tp2">
+            <a href="" rel="lightbox"  >
+                <img  src="" id="tp5" title="img"  alt='图片不全或图片缺失,请勿点击'/>
+            </a>
+        </p>
+		<p id="tp3">
+            <a href="" rel="lightbox"  >
+                <img  src="" id="tp6" title="img"  alt='图片不全或图片缺失,请勿点击'/>
+            </a>
+        </p>
+	</div>
+</div>
+<!--通用弹出 -->
+<div class="modal fade" id="common_temp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">通用</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+		<inpu type="hidden" class="hide">
+    </div>
+<!-- 通用弹出 end -->
+</body>
+</html>
+
+<!--审核-->
+<script type="text/html" id="veri_temp">
+	<div class="col-lg-offset-4 control-label1">
+		<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名 : </label><span class="account">{name}</span>
+	</div>
+	<div class="col-lg-offset-4 control-label1">
+		<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">当前审核状态 : </label><span class="state">{_verify}</span>
+	</div>
+	
+	<br>
+	<div class="ser"><button type="button" class="btn btn-info ti">通过</button></div>
+	
+</script>
+<!--通知-->
+<script type="text/html" id="inform_temp">
+	<div class="col-sm-offset-4 huiyuan">
+		<label>会员账号 : </label><span>{username}</span>
+	</div>
+	<div class="col-sm-offset-4 users">
+		<label>姓名 : </label><span>{name}</span>
+	</div>
+	<div class="col-lg-offset-4 btns">
+		<button type="button" class="btn btn-danger">通知记录</button>
+	</div>
+	<div class="inform">
+		<div class="col-sm-offset-2 zhangh1" flag="1">
+			<label><span class="img"></span>账号信息 : </label>
+			<div>亲爱的会员，您的资料审核未通过！请尽快登陆会员系统进行资料完善和修改。</div>
+		</div>
+		<div class="col-sm-offset-2 zhangh2" flag="2">
+			<label><span></span>身份验证 : </label>
+			<div>亲爱的会员，您的身份验证未通过！请尽快登陆会员系统上传身份证图片。</div>
+		</div>
+	</div>                                                                                                 
+	<div class="col-lg-offset-1 shuru">
+		<label>具体原因描述:</label>
+		<textarea rows="10" cols="30"></textarea>
+    </div><br>
+	<button type="button" class="btn btn-primary send" flag="{user_id}">发送</button>
+</script>
+<!--查看-->
+<script type="text/html" id="look_temp">
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">会员账号 : </label><span class="sen">{username}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">姓名 : </label><span class="mz">{name}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">手机号码 : </label><span class="sj">{phone}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4 ">电子邮件 : </label><span class="yj">{email}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">支付宝 : </label><span class="zfb">{alipay_account}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">微信 : </label><span class="wx">{weixin_account}</span>
+	</div>
+	</div><br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">开户银行 : </label><span class="khh">{bank_name}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4">银行账户 : </label><span 
+        class="yh">{bank_account}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4"><span class='types_ids'>身份证号 : </span></label><span 
+        class="sfz">{card_id}</span>
+	</div>
+	<br>
+	<div class="col-lg-offset-2 control-label hh">
+		<label class="checkbox-inline1 col-lg-4 col-md-4 col-sm-4"><span class='types_img'>身份证照 : </span></label><a href="jacascript:;" flag="{user_id}" id="chakan">点击查看</a>
+	</div>
+</script>
+<!--搜索-->
+<script type="text/html" id="seek_temp">
+  <form class="form-horizontal" role="form">
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>ID :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname1" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>会员账号 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname2" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>姓名 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname3" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>手机号码 :</p>	
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname4" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>支付宝 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname5" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>微信 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname6" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>开户银行 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname7" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>银行账户 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname8" >
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-1 control-label">
+				<label class="checkbox-inline col-lg-4 col-md-4 col-sm-4">
+					<span class="pitch_on"></span><p>身份证号 :</p>
+				</label>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="text" class="form-control bh" id="firstname9" >
+				</div>
+			</div>
+		</div>
+		<input type="submit"  class="sousuo" value="搜索">
+		<input type="button" class="replacement" value="重置">
+	</form>
+</script>
+<script type="text/html" id="tr_temp">
+	<tr flag="{user_id}" class="tr">
+		<td>{user_id}</td>
+		<td>{username}</td>
+		<td>{name}</td>
+		<td>{_status}</td>
+		<td class="emve">{_verify}</td>
+		<td><span  class="look" flag="look_btn">查看</span></td>
+		<td><span flag="veri_btn" class="look" onclick="look({user_id})">审核</span></td>
+		<td><span flag="inform_btn" class="message look" data-toggle="modal" data-target="#myModal">通知</span></td>
+		<td><span class="glyphicon glyphicon-arrow-up gen"></span></td>
+		<td>{update_time}</td>
+		<td>{create_time}</td>
+		<td style="display:none">{phone}</td>
+	</tr>
+</script>
+<!--放大镜-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">通知</h4>
+      </div>
+      <div class="modal-body">
+			<div class="col-sm-offset-4 huiyuan">
+		<label>会员账号 : </label><span class="user_name"></span>
+			</div>
+			<div class="col-sm-offset-4 user">
+				<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名 : </label><span class="names"></span>
+			</div>
+			<div class="col-lg-offset-4 btns">
+				<button type="button" class="btn btn-danger btnss">通知记录</button>
+			</div>
+			<div class="record col-sm-offset-2" style="display:none">
+				
+			</div>
+			<div class="inform">
+				<div class="col-sm-offset-1 zhangh1" flag="1">
+					<label><span class="imgs" flag="1"></span>账号信息 : </label>
+					<div>亲爱的会员，您的个人资料审核未通过！请尽快登陆会员系统进行资料完善和修改。</div>
+				</div>
+				<div class="col-sm-offset-1 zhangh2" flag="2">
+					<label><span class="imgs" flag="2"></span>身份验证 : </label>
+					<div>亲爱的会员，您的身份验证审核未通过！请尽快登陆会员系统进行资料完善和修改。</div>
+				</div>
+			</div>                                                                                                 
+			<div class="col-lg-offset-1 shuru">
+				<label>具体原因描述:</label>
+				<textarea rows="10" cols="30" class="txt"></textarea>
+			</div><br>
+			<button type="button" class="btn btn-primary send fasong" flag="{user_id}">发送</button>
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>
+
+ 

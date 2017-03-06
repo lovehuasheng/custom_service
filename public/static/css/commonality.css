@@ -1,0 +1,125 @@
+/*公共*/
+body{
+    font-family: "微软雅黑";
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.home{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.navigation{
+    background-color: #272727;
+    padding: 0;
+    margin: 0;
+}
+.navigation .nav_left{
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: text-bottom;
+    color: #fff;
+    font-weight: bold;
+}
+.navigation .nav_left img{
+    vertical-align: text-bottom;
+}
+ .list,.nav_left,.home div{
+    margin: 0;
+    padding: 0;
+}
+.navigation .list ul {
+    list-style: none;
+    width:100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height:79px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.navigation .list ul li{
+    float: left;
+    width:13%;
+    height:80px;
+    border-left:1px solid #fff;
+}
+.navigation .list ul li:hover{
+    background-color: #e20101;
+}
+.navigation .list ul li a{
+    color:#fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navigation .list ul li span{
+    display: inline-block;
+    margin-top: 5px;
+    width:45px;
+    height:45px;
+}
+.navigation .list ul li span:nth-child(1){
+    background: url(../images/icon5.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(2) {
+    background: url(../images/icon4.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(3) {
+    background: url(../images/icon3.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(4) {
+    background: url(../images/icon2.png) center center no-repeat;
+}
+.navigation .list ul li span:nth-child(5) {
+    background: url(../images/icon1.png) center center no-repeat;
+}
+/*TODO 预留左侧导航栏*/
+.left_nav{
+    width:90px;
+    height:930px;
+    background-color:#272727;
+}
+.radius{
+    width:140px;
+    height:140px;
+    background-color: #272727;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 140px;
+    position: absolute;
+    top:43px;
+    left:0;
+}
+.current{
+    width:100%;
+    padding-left: 90px;
+    background-color:#272727;
+    height:60px;
+    line-height: 60px;
+    margin: 0;
+
+}
+.current p{
+    background-color: #fff;
+    padding-left: 90px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    color:#999;
+}
+.current p img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.current p b{
+    font-size: 18px;
+    color:#111;
+    margin-right: 30px;
+}
+.current p a {
+    color: #999;
+}
+
+
+

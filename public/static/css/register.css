@@ -1,0 +1,134 @@
+body{
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+}
+/**我的工作**/
+.context{
+    margin-left: 3px;
+}
+.back a{
+    float: right;
+    color:#e20400;
+    margin-top: 10px;
+}
+.container-fluid .header_row{
+    margin-top: 13px;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.s-span{
+    color: #9a9a9a;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    padding-left: 70px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+/*内容*/
+.statement{
+    padding-left: 70px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+select {
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+.statement .yearly{
+    display: inline-block;
+    width: 115px;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    margin-left: 80px;
+    background: #2fa5e8;
+    cursor: pointer;
+}
+.register_year,.register_month{
+    margin-top: 50px;
+    padding-left: 70px;
+}
+.register_year h3,.register_month h3{
+    text-align: center;
+}
+@media screen and (max-width: 1400px) {
+    body {
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+    }
+
+    /**我的工作**/
+    .context {
+        margin-left: 3px;
+    }
+
+    .container-fluid .header_row {
+        margin-top: 13px;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+
+    .s-span {
+        color: #9a9a9a;
+    }
+
+    .border_bottom {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+        padding-left: 70px;
+    }
+
+    .img_01 {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: url(../images/jingling.png) 84px 0px;
+        position: relative;
+        top: 6px;
+    }
+
+    /*内容*/
+    .statistics {
+        padding-left: 70px;
+        padding-top: 20px;
+    }
+
+    .statistics span {
+        display: inline-block;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .statistics table thead tr td {
+        background: #4d708b;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+    .statistics table tbody tr td {
+        font-size: 14px;
+        text-align: center;
+    }
+    .register_year,.register_month{
+        margin-top: 50px;
+        padding-left: 70px;
+    }
+    .register_year h3,.register_month h3{
+        text-align: center;
+    }
+}

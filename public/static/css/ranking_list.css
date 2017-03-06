@@ -1,0 +1,128 @@
+body{
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+}
+/**我的工作**/
+.context{
+    margin-left: 3px;
+}
+.container-fluid .header_row{
+    margin-top: 13px;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.s-span{
+    color: #9a9a9a;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    padding-left: 70px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+.ranking{
+    padding-top: 20px;
+    padding-left: 70px;
+}
+.ranking table thead tr td{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border:1px solid #e5e5e5 ;
+}
+.tbody1{
+    border:1px solid #e5e5e5;
+}
+.col-lg-4 ,.col-md-4,.col-sm-4{
+	padding-right:0;
+	padding-left:0;
+}
+.tbody1 tr td:nth-child(5),.tbody1 tr td:nth-child(9){
+    border-left:1px solid #e5e5e5;
+}
+.work table thead tr td{
+    background: #199fd9;
+}
+.pass table thead tr td{
+    background: #cb6700;
+}
+.times table thead tr td{
+    background: #329a32;
+}
+.ranking table tbody tr td{
+   text-align: center;
+}
+.tbody1 tr .top1 span,.ranking tbody tr td img{
+    display: inline-block;
+    margin-right: 5px;
+}
+.ranking table tbody tr td{
+    text-align: center;
+    font-size: 16px;
+}
+.tbody1 tr .champion{
+    position: relative;
+}
+.tbody1 tr .champion>img{
+    position: absolute;
+    top:-8px;
+    left:50px;
+}
+.work_time_sort tr .champion>img{
+	position: absolute;
+    top:-8px;
+    left:30px;
+} 
+.chart{
+	padding-left:70px;
+	padding-top:20px;
+}
+.daily_charts {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    background: #ee2e2e;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.year_charts{
+	width: 100px;
+    height: 35px;
+    line-height: 35px;
+    background: #199fd9;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 1400px){
+	.tbody1 tr .champion{
+		position: relative;
+	}
+	.tbody1 tr .champion>img{
+		position: absolute;
+		top:-8px;
+		left:30px;
+	}
+	.work_time_sort tr .champion>img{
+		position: absolute;
+		top:-8px;
+		left:15px;
+	} 
+}

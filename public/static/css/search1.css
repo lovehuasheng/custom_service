@@ -1,0 +1,242 @@
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.s-span{
+  color: #9a9a9a;
+  font-size: 18px;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+.form-horizontal .control-label{
+  text-align: left;
+    font-size: 1.3em;
+  font-weight: 400;
+   margin-top: 26px;
+}
+#s-row{
+  margin-left: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+#s-fenlei>div{
+  cursor: pointer;
+}
+.s-btn{
+  float: right;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.btn-danger{
+  font-size: 20px;
+}
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td{
+  vertical-align: hidden;
+  text-align: center;
+  
+  font-weight: 400;
+  color: #fdffff;
+}
+.table-bordered > tbody > tr > td{
+  color: #333;
+  font-size: 18px;
+}
+.table-bordered > tbody > tr > th{
+  background-color: #4d7086;
+  font-size: 20px;
+}
+.row{
+  font-size: 20px;
+  margin-top: 26px;
+}
+#form-control{
+  margin-top: 26px;
+  line-height: 29px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.s-span{
+  color: #9a9a9a
+}
+.btn-info{
+  margin-top: 26px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fdffff;
+}
+.s-div{
+  position: relative;
+}
+.s-div>span{
+   width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  display: inline-block;
+  position: absolute;
+  top:5px; 
+}
+.tck-cg1{
+   width: 367px;
+  height: 265px;
+  background-color:#fff;
+  z-index: 2;
+  position: fixed;
+  top: 27%;
+  left: 36%;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: none;
+}
+.tck-cg1>p{
+   /*position: absolute;
+  top: 183px;
+  left: 107px;*/
+  color: #cc0000;
+  font-size: 20px;
+  margin-top:26px; 
+}
+.tck-cg1>img{
+  cursor: pointer;
+  margin-top:50px; 
+}
+
+.tck-cg{
+   width:1400px;
+   height:1000px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   text-align: center;
+   display: none;
+}
+.btn-lg{
+  padding: 7px 16px;
+}
+
+.icon-1{
+  display: none;
+}
+.tiaozhuan{
+    border-radius: 5px;
+    width: 50px;
+    height: 28px;
+    padding: 3px 5px;
+    border: 1px solid gray;
+     margin-left: 8px;
+     color: #428BCA;
+}
+#fenye{
+    width: 36px;
+    height: 28px;
+    padding: 0 3px;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+.dangqian,.zuida{
+    color: #333;
+    margin-left: 8px;
+}
+select{
+    padding: 5px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+    margin-top: 14px;
+}
+#text{
+     margin-top: 14px;
+    width: 160px;
+    line-height: 28px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+     margin-left: 20px;
+     padding: 2px;
+}
+#t-btn{
+    width: 80px;
+    line-height: 28px;
+    border-radius:5px;
+    background-color:#2fa5e8;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 20px;
+     border: 1px solid #2fa5e8;
+}
+.btn-info{
+  margin-top: 13px;
+}
+#quxiao{
+  padding: 10px;
+  font-size: 16px;
+}
+#xuanze{
+  margin-top: 22px;
+}
+.modal-body,.modal-title,.modal-footer{
+  text-align: center;
+  font-size: 18px;
+}
+.modal-header{
+  background: #2fa5e8;
+   color: #fff;
+}
+.modal-content{
+  width: 500px;
+}
+.icon-4{
+  display: none;
+}
+select,select option{
+  text-align: center;
+}
+@media screen and (max-width: 1400px){
+    .table-bordered > tbody > tr > th{
+        font-size: 16px;
+        vertical-align: hidden;
+    }
+    .table-bordered > tbody > tr > td{
+        font-size: 14px;
+         vertical-align: hidden;
+    }
+}
+#age,#jidu{
+  margin-top: 23px;
+}
+#ages,#jidus{
+ display: none;
+}
+.audit{
+  margin-top: 1px;
+  font-size: 16px;
+}
+#audit{
+  line-height: 74px;
+  margin-left: 55px;
+}
+#audits{
+  line-height: 60px;
+  margin-left: 55px;
+  display: none;
+}
+.audit>.icon-b{
+  display:none;
+}
+.audits>.icon-b{
+  display:none;
+}

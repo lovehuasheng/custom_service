@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+    <title>客服系统</title>
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/mywork_company_manager.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/js/skin/layer.css?{$Think.config.html_version}"/>
+    <link rel="stylesheet" type="text/css" href="http://img01.shanxinhui.com.cn/kefu/static/css/lq.datetimepick.css?{$Think.config.html_version}"/>
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/picbox.css?{$Think.config.html_version}">
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery.min.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/picbox.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}' type='text/javascript'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/lq.datetimepick.js?{$Think.config.html_version}' type='text/javascript'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/mywork_company_manager.js?{$Think.config.html_version}'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/js/jquery.pages.js?{$Think.config.html_version}'></script>
+    <script src='http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}'></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- 头部公用样式 -->
+        <div class="row border_bottom header_row">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 header_title"><span class="img_01"></span><span> 当前位置：</span>
+              <span class="s-span">我的工作&gt;&gt;企业超级管理员</span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <span class="open">点击展开</span>
+            </div>
+        </div>
+    <div id="header_box">
+        <!-- 输入框 -->
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: </span><input type="text" class="ipt_01 ipt_02 id">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 会员账号: </span><input type="text" class="ipt_01 ipt_02 username">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名: </span><input type="text" class="ipt_01 ipt_02 name">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 手机号码: </span><input type="text" class="ipt_01 ipt_02 phone">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 支&nbsp;付&nbsp;&nbsp;宝: </span><input type="text" class="ipt_01 ipt_02 zhifubao">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 银行账户: </span><input type="text" class="ipt_01 ipt_02 back">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 身份证号: </span><input type="text" class="ipt_01 ipt_02 card">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信: </span><input type="text" class="ipt_01 ipt_02 weixin">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 激活状态: </span>
+                <select class="ipt_02 jihuo">
+                  <option value=""></option>
+                  <option value="0">未激活</option>
+                  <option value="1">已激活</option>
+                </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 shenhe_zhuangtai"></span><span class="spa"> 审核状态: </span>
+                <select class="ipt_02 shenhe">
+                  <option value=""></option>
+                  <option value="2">已通过</option>
+                  <option value="1">未通过</option>
+                  <option value="0">未审核</option>
+                </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id='gx'> 
+                <span class="img_02 img_0"></span><span class="spa">更新状态</span>
+                <select id="gx_time">
+                  <option value="">全部</option>
+                  <option value="1">已更新</option>
+                  <option value="0">未更新</option>
+                </select>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> 
+                <span class="img_02 renwu_time"></span><span class="spa"> 任务时间: </span><input type="text" name="datepicker" class="datetimepicker3 renwu_str renwu" onfocus="newday('renwu_str')"/><span class="spa"> -- </span><input type="text" class="datetimepicker3 renwu_end renwu" name="datepicker" onfocus="newday('renwu_end')"/>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                <span class="img_02 img_0"></span><span class="spa"> 操&nbsp;&nbsp;作&nbsp;&nbsp;员: </span><input type="text" class="ipt_01 ipt_02 caozuoyuan">
+            </div>
+        </div>
+        <div class="row time">
+            <div class="col-lg-12">
+                <span class="img_02 zuce_time"></span><span class="spa"> 注&nbsp;&nbsp;册&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;间: </span><input type="text" name="datepicker" class="datetimepicker3 zuce_str zuce" class="form-control" onfocus="newday('zuce_str')" /> 
+                  <select class="sel_1">
+                    <option>小时</option>
+          <option value=" 0">0</option>
+                    <option value=" 1">1</option>
+                    <option value=" 2">2</option>
+                    <option value=" 3">3</option>
+                    <option value=" 4">4</option>
+                    <option value=" 5">5</option>
+                    <option value=" 6">6</option>
+                    <option value=" 7">7</option>
+                    <option value=" 8">8</option>
+                    <option value=" 9">9</option>
+                    <option value=" 10">10</option>
+                    <option value=" 11">11</option>
+                    <option value=" 12">12</option>
+                    <option value=" 13">13</option>
+                    <option value=" 14">14</option>
+                    <option value=" 15">15</option>
+                    <option value=" 16">16</option>
+                    <option value=" 17">17</option>
+                    <option value=" 18">18</option>
+                    <option value=" 19">19</option>
+                    <option value=" 20">20</option>
+                    <option value=" 21">21</option>
+                    <option value=" 22">22</option>
+                    <option value=" 23">23</option>
+                  </select>
+                <span>--</span> <input type="text" name="datepicker" class="datetimepicker3 zuce_end zuce" class="form-control"onfocus="newday('zuce_end')"/>
+                   <select class="sel_2">
+                    <option>小时</option>
+                    <option value=" 0">0</option>
+                    <option value=" 1">1</option>
+                    <option value=" 2">2</option>
+                    <option value=" 3">3</option>
+                    <option value=" 4">4</option>
+                    <option value=" 5">5</option>
+                    <option value=" 6">6</option>
+                    <option value=" 7">7</option>
+                    <option value=" 8">8</option>
+                    <option value=" 9">9</option>
+                    <option value=" 10">10</option>
+                    <option value=" 11">11</option>
+                    <option value=" 12">12</option>
+                    <option value=" 13">13</option>
+                    <option value=" 14">14</option>
+                    <option value=" 15">15</option>
+                    <option value=" 16">16</option>
+                    <option value=" 17">17</option>
+                    <option value=" 18">18</option>
+                    <option value=" 19">19</option>
+                    <option value=" 20">20</option>
+                    <option value=" 21">21</option>
+                    <option value=" 22">22</option>
+                    <option value=" 23">23</option>
+                  </select>
+                <button type="button" class="btn btn-info Newday_zc" onclick="day(1,'zc')">今日</button>
+                <button type="button" class="btn btn-info Prevday_zc" onclick="day(-1,'zc')">昨日</button>
+                <button type="button" class="btn btn-info Sevenday_zc" onclick="day(7,'zc')">最近7天</button>
+                <button type="button" class="btn btn-info Sanshiday_zc" onclick="day(30,'zc')">最近30天</button>
+            </div>
+        </div>
+        <div class="row time">
+            <div class="col-lg-12">
+                <span class="img_02 gengxin_time"></span><span class="spa"> 资料更新时间: </span><input type="text" name="datepicker" class="datetimepicker3 gengxin_str gengxin" class="form-control" onfocus="newday('gengxin_str')"/> 
+                 <select class="sel_3">
+                    <option>小时</option>
+                    <option value=" 0">0</option>
+                    <option value=" 1">1</option>
+                    <option value=" 2">2</option>
+                    <option value=" 3">3</option>
+                    <option value=" 4">4</option>
+                    <option value=" 5">5</option>
+                    <option value=" 6">6</option>
+                    <option value=" 7">7</option>
+                    <option value=" 8">8</option>
+                    <option value=" 9">9</option>
+                    <option value=" 10">10</option>
+                    <option value=" 11">11</option>
+                    <option value=" 12">12</option>
+                    <option value=" 13">13</option>
+                    <option value=" 14">14</option>
+                    <option value=" 15">15</option>
+                    <option value=" 16">16</option>
+                    <option value=" 17">17</option>
+                    <option value=" 18">18</option>
+                    <option value=" 19">19</option>
+                    <option value=" 20">20</option>
+                    <option value=" 21">21</option>
+                    <option value=" 22">22</option>
+                    <option value=" 23">23</option>
+                  </select>
+                <span>--</span> <input type="text" name="datepicker" class="datetimepicker3 gengxin_end gengxin" class="form-control" onfocus="newday('gengxin_end')"/>
+                 <select class="sel_4">
+                    <option>小时</option>
+                   <option value=" 0">0</option>
+                    <option value=" 1">1</option>
+                    <option value=" 2">2</option>
+                    <option value=" 3">3</option>
+                    <option value=" 4">4</option>
+                    <option value=" 5">5</option>
+                    <option value=" 6">6</option>
+                    <option value=" 7">7</option>
+                    <option value=" 8">8</option>
+                    <option value=" 9">9</option>
+                    <option value=" 10">10</option>
+                    <option value=" 11">11</option>
+                    <option value=" 12">12</option>
+                    <option value=" 13">13</option>
+                    <option value=" 14">14</option>
+                    <option value=" 15">15</option>
+                    <option value=" 16">16</option>
+                    <option value=" 17">17</option>
+                    <option value=" 18">18</option>
+                    <option value=" 19">19</option>
+                    <option value=" 20">20</option>
+                    <option value=" 21">21</option>
+                    <option value=" 22">22</option>
+                    <option value=" 23">23</option>
+                  </select>
+                <button type="button" class="btn btn-info Newday_zc" onclick="day(1,'gx')">今日</button>
+                <button type="button" class="btn btn-info Prevday_zc" onclick="day(-1,'gx')">昨日</button>
+                <button type="button" class="btn btn-info Sevenday_zc" onclick="day(7,'gx')">最近7天</button>
+                <button type="button" class="btn btn-info Sanshiday_zc" onclick="day(30,'gx')">最近30天</button>
+                <button type="button" class="btn btn-info sousuo">搜索</button>
+                <button type="button" class="btn btn-info" onclick="chongzhi()">重置</button>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 number">
+            <p class="mun">当前数量: <span class="num_s"></span></p>   
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <!-- <span >更新状态</span>
+                <select id="gx_time">
+                  <option value="">全部</option>
+                  <option value="1">已更新</option>
+                  <option value="0">未更新</option>
+                </select> -->
+                <span class="fenpai">分派状态</span>
+                <select id="xiala">
+                  <option value="">全部</option>
+                  <option value="1">已指派</option>
+                  <option value="0">未指派</option>
+                </select>
+                <button type="button" class="btn btn-danger zp" data-toggle="modal" data-target="#myzhipai">指派任务</button>
+                <button type="button" class="btn btn-danger qbzp" data-toggle="modal" data-target="#zhipai">全部指派</button>
+                <button type="button" class="btn btn-danger" onclick="shuaxin()">刷新</button>
+        </div>
+    </div>
+  
+        <!-- 内容框 -->
+        <table class="table tab table-bordered" id="oder">
+            <tr>
+                <th>全选 <input type="checkbox" id="box"></th>
+                <th>ID</th>
+                <th>会员账号</th>
+                <th>公司名称</th>
+                <th>转移商务中心</th>
+                <th>审核状态</th>
+                <th>任务员</th>
+                <th>操作员</th>
+                <th colspan="7">操作</th>
+                <th>更新状态</th>
+                <th flag='update_time'>资料更新时间<span class="glyphicon glyphicon-arrow-up" flag='1'></span><span class="glyphicon glyphicon-arrow-down" flag='0'></span></th>
+                <th flag='create_time'>注册时间<span class="glyphicon glyphicon-arrow-up" flag = '1'></span><span class="glyphicon glyphicon-arrow-down" flag='0'></th>
+            </tr>
+            <tbody class="tbody1"> 
+              
+            </tbody> 
+        </table>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 tcdPageCode" id="tcd"></div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pages_Code"> 
+            <input type="text" class="pageCode">
+            <button type="button" class="btn btn-info PagesCode">跳转</button> 
+          </div>
+        </div>
+    </div>
+<!-- 操作审核 -->
+<div class="modal fade" id="myshenhe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">审核</h4>
+      </div>
+      <div class="modal-body">
+            <p>会&nbsp;&nbsp;&nbsp;&nbsp;员&nbsp;&nbsp;&nbsp;&nbsp;账&nbsp;&nbsp;&nbsp;号:<span class="usn"></span></p>
+            <p>在当前审核状态:<span class="vif"></span></p>
+            <button type="button" class="btn btn-info shenhe_tijiao">通过</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作编辑 -->
+<div class="modal fade" id="mybianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑资料</h4>
+      </div>
+      <div class="modal-body">
+            <p>会员账号:<span class="bianji_hyzh"></span> <i>(默认显示，不可修改)</i></p>     
+      </div>
+      <div class="modal-footer row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">公司名称: </span><input type="text" class="ipt_01 ipt_1">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">营业执照号码: </span><input type="text" class="ipt_01 ipt_2">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">法人姓名: </span><input type="text" class="ipt_01 ipt_3">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">身份证号: </span><input type="text" class="ipt_01 ipt_4" disabled="disabled">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">手机号码: </span><input type="text" class="ipt_01 ipt_5">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">电子邮箱: </span><input type="text" class="ipt_01 ipt_6">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">法人支付宝: </span><input type="text" class="ipt_01 ipt_7">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">企业支付宝: </span><input type="text" class="ipt_01 ipt_8">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">法人银行账户: </span><input type="text" class="ipt_01 ipt_9">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">法人账户开户行: </span><input type="text" class="ipt_01 ipt_10">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">公司对公账户: </span><input type="text" class="ipt_01 ipt_11">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <span class="spa">公司账户开户行: </span><input type="text" class="ipt_01 ipt_12">
+          </div>
+          <button type="button" class="btn btn-danger tianjiabeizhu">备注记录</button>
+          <div class="beizhu">
+              <div class="beizhu_a">
+                <span id='beizhujilu'>备注记录:</span><div class="bianji_jilu"></div>
+              </div>
+            </div> 
+            <div class="beizhu_1">
+                <span>添加备注:</span><textarea rows="4" cols="40" class="bianji_beizhu"></textarea>
+           </div>
+            <button type="button" class="btn btn-info bianji_tijiao">提交</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 转移商务中心-->
+<div class="modal fade" id="mytuijianren" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">转移商务中心</h4>
+      </div>
+      <div class="modal-body">
+            <div class="tuijian">
+                <span class="tuijian_span_01">转移商务中心: </span><span class="tuijian_span_02">转移到: </span><input type="text" class="input_tuijian">
+            </div>
+            <button type="button" class="btn btn-danger zhuanyibeizhu">备注记录</button>
+            <div class="tuijian_beizhu_parent">
+              <div class="tuijian_beizhujilu">
+                <span>备注记录: </span><div class="tongzhi_jilu"></div>
+              </div>
+              <div class="tuijian_beizhu">
+                <span>备&nbsp;&nbsp;&nbsp;&nbsp;注: </span><textarea rows="4" cols="40" class="tuijianren_beizhu"></textarea>
+              </div>
+            </div> 
+            <button type="button" class="btn btn-info zhuanyi_tijiao">提交</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作查看 -->
+<div class="modal fade" id="mychakan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">查看信息</h4>
+      </div>
+      <div class="modal-body">
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作通知 -->
+<div class="modal fade" id="mytongzhi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">通知</h4>
+      </div>
+      <div class="modal-body">
+            <div class="body_title">
+                <p>会员账号：<span class="username"></span></p>
+                <p>公司名称：<span class="name"></span></p> 
+            </div>
+            <button type="button" class="btn btn-danger NoticeText">通知记录</button>
+            <div class="tongzhi_jilu tongzhi_beizhu">
+                <span class=" jilu">通知记录: </span><div class="tongzhi_text"></div>
+            </div>
+            
+            <div class="shenhetongzhi">
+                <span class="shenhetongzhi_name">审核通知:</span><br/><span class="img_02" name="5"></span><span>账户信息：亲爱的会员，您的企业信息未审核通过！请尽快登录会员系统进行完善和修改</span><br/>
+                <span class="img_02" name="6"></span><span>身份验证：亲爱的会员，您的身份验证未审核通过！请尽快登录会员系统上传身份证照片</span>
+            </div>
+            <div class="xiugaiziliaotongzhi">
+                <span class="shenhetongzhi_name">修改资料通知:</span><br/><span class="img_02" name="7"></span><span>客服修改：亲爱的会员，您的企业信息已修改完毕！请尽快登录会员系统进行查看，如有疑问请咨询客服</span><br/>
+                <span class="img_02" name="8"></span><span>身份验证：亲爱的会员，您的企业信息已经反审回去！请尽快登录会员系统修改,再次提交审核</span>
+            </div>
+            <div>
+                <span>具体原因描述: </span><textarea rows="3" cols="30" class="content_text" placeholder="此处为必填"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary tongzhi_fasong">发送</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作特权 -->
+<div class="modal fade" id="mytequan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">特权</h4>
+      </div>
+      <div class="modal-body">
+            <div class="body_title">
+                <p>会员账号：<span class="usn"></span></p>
+                <p>公司名称：<span class="name"></span></p> 
+            </div>
+            <button type="button" class="btn btn-danger tequan_beizhu_ck">备注记录</button>
+            <div class="tequan_beizhujilu">
+                <span>备注记录: </span><div class="tequan_tongzhi_jilu"></div>
+            </div>
+            <div class="rengyi">
+                <span class="col">任意转币：</span>
+                <span class="img_02 opens"></span>
+                <span name="1">开放</span>
+                <span class="img_02 shutDown"></span>
+                <span name="0">关闭</span>
+            </div>
+            <div class="tequan_beizhu">
+                <span class="col">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注: </span><textarea rows="4" cols="40" class="tequan_beizhu_textarea" placeholder="此处为必填"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn2 tequan_fasong">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作封号 -->
+<div class="modal fade" id="myfenghao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">封号</h4>
+      </div>
+      <div class="modal-body">
+            <div class="body_title">
+                <p>会员账号：<span class="username"></span></p>
+                <p>公司名称：<span class="name"></span></p>
+                <p>当前激活状态：<span class="vif"></span></p> 
+            </div>
+            <button type="button" class="btn btn-danger fenghao_ck">备注记录</button>
+            <div class="fenghao_beizhujilu">
+                <span>备注记录: </span><div class="fenghao_tongzhi_jilu"></div>
+            </div>
+            <div class="rengyi">
+                <span class="col">冻结账号：</span>
+                <span class="img_02 img_dongjie tr"></span>
+                <span name='2'>是</span>
+                <span class="img_02 img_dongjie fa"></span>
+                <span name='1'>否</span>
+            </div>
+            <div class="tequan_beizhu">
+                <span class="col">备&nbsp;&nbsp;&nbsp;&nbsp;注: </span><textarea rows="3" cols="37" class="fenghao_beizhu"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn2 fenghao_fasong">发送</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 操作指派 -->
+<div class="modal fade" id="myzhipai" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">指派任务</h4>
+      </div>
+      <div class="modal-body">
+            <span>指派给: </span><input type="text" class="zhipaigei" placeholder="请输入对方用户名"><br>
+            <span>请选择指派时间：</span><input type="text" name="datepicker" class="datetimepicker3 form-control " id="Date"/> 
+            <button type="button" class="btn btn-primary zhipai_tijiao">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--全部指派-->
+<div class="modal fade" id="zhipai" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">全部指派</h4>
+      </div>
+      <div class="modal-body">
+            <p>数据已全部加载！</p>
+            <span>指派给: </span><input type="text" id="qbzp" placeholder="请输入对方用户名"><br>
+            <span>请选择指派时间：</span><input type="text" name="datepicker" class="datetimepicker3 form-control Dateover" id="Dateover" onfocus="newday('Dateover')"/><br/>
+            <!--<span>从第 </span><input type="text" class='page_sta'> 页 到 <input type='text' class='page_end'> 页<br/>-->
+            <button type="button" class="btn btn-primary" id="qbzhipai">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--照片弹出-->
+<div id="imgs">
+    <div class="out">×</div>
+    <div id="main">
+        <p id="tp1">
+            <a href="" rel="lightbox">
+                <img  src="" id="tp4" title=""  alt='图片不存在或损坏，请勿点击'/>  <!--onerror="nofind(this);"-->
+            </a>
+        </p>
+        <p id="tp2">
+            <a href="" rel="lightbox">
+                <img  src="" id="tp5" title=""  alt='图片不存在或损坏，请勿点击'/>
+            </a>
+        </p >
+        <p id="tp3">
+            <a href="" rel="lightbox">
+                <img  src="" id="tp6" title=""  alt='图片不存在或损坏，请勿点击' />
+            </a>
+        </p >
+        <p id="tp7">
+            <a href="" rel="lightbox">
+                <img  src="" id="tp8" title=""  alt='图片不存在或损坏，请勿点击' />
+            </a>
+        </p >
+    </div>
+</div>
+
+
+<!--重置密码-->
+<div class="modal fade" id="mychongzhi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">重置密码</h4>
+      </div>
+      <div class="modal-body">
+            <span>会员账号: </span><span class='chognzhi_name'></span><br/>
+            <span>新登录密码: </span><input class='chognzhi_denglu'type='text'/><br/>
+            <span>新二级密码: </span><input class='chognzhi_erji'type='text'/><br/>
+            <button type="button" class="btn btn-primary" id="chongzhi_queding" style='margin-left:145px;'>提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 隐藏替换页面 -->
+<script type="text/html" id="none">
+  <tr flag="{company_id}">
+      <td><input type="checkbox" name='checkname' class="caozuo"></td>
+      <td class="ids">{company_id}</td>
+      <td class="username">{username}</td>
+      <td>{company_name}</td>  
+      <td><p data-toggle="modal" data-target="#mytuijianren" class="zhuanyi caozuo">转移</p></td>
+      <td class="emve">{verify}</td>
+      <td style="display:none">{status}</td>
+      <td>{verify_uname}</td>
+      <td>{operator_name}</td>
+      <td><p class="caozuo chakan" data-toggle="modal" data-target="#mychakan">查看</p></td>
+      <td><p class="caozuo bianji" data-toggle="modal" data-target="#mybianji">编辑</p></td>
+      <td><p class="caozuo shenhe" data-toggle="modal" data-target="#myshenhe">审核</p></td>
+      <td><p class="caozuo tongzhi" data-toggle="modal" data-target="#mytongzhi">通知</p></td>
+      <td><p class="caozuo tequan" data-toggle="modal" data-target="#mytequan">特权</p></td>
+      <td><p class="caozuo fenghao" data-toggle="modal" data-target="#myfenghao">{status}</p></td>
+      <td><p class="caozuo chongzhi" data-toggle="modal" data-target="#mychongzhi">重置密码</p></td>
+      <td><p class='glyphicon glyphicon-arrow-up gen'></p></td>
+      <td>{update_time}</td>
+      <td>{create_time}</td>
+      <td style="display:none">{mobile}</td>     
+  </tr>
+</script>
+
+<!-- 查看用户信息替换页 -->
+<div class="chakanyonghuxinxi" style="display:none">
+      <p>会员账号：<span class="user_name"></span></p>    
+      <p>手机号码：<span>{mobile}</span></p>
+      <p>公司名称：<span>{company_name}</span></p>
+      <p>公司法人：<span>{legal_person}</span></p>
+      <p>公司对公账户：<span>{public_bank_account}</span></p>
+      <p>对公账户开户行：<span>{public_bank_name}</span></p>
+      <p>法人银行账户：<span>{legal_bank_account}</span></p>
+      <p>法人账户开户行：<span>{legal_bank_name}</span></p>
+      <p>法人支付宝账号：<span>{legal_alipay_account}</span></p>
+      <p>企业支付宝账号：<span>{company_alipay_account}</span></p>
+      <p>营业执照号码：<span>{business_license}</span></p>
+      <p>认证图片: <a href="#" id="chakan">点击查看</a></p>
+</div>
+</body>
+</html>

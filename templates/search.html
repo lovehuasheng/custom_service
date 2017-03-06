@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+	<title></title>
+	<link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/search.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/lq.datetimepick01.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!-- 头部公用样式 -->
+		<div class="row" id="s-row">
+			<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon6.png" alt=""><span class="weizhi">&#x3000;当前位置：</span><span class="s-span">&#x3000;我的工作&gt;&gt;查询收款剩余</span></div>
+		</div>
+		<div class="row" id="s-fenlei">
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">社区</div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="0"><img  id="icon-1" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;全部</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="1"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;特困</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="2"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;贫穷</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="3"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;小康</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="4"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;富人</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="5"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;德善</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="6"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;大德</span></div>
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" id="7"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><span>&nbsp;企业</span></div>
+		</div>
+
+		<form id="data-time" class="form-horizontal  col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-lg-3 col-md-4 col-sm-4 col-xs-4 control-label">接受资助日期:</label>
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" id="form-control" id="datepicker" class="datetimepicker3" value="" />
+
+				</div>
+				<div  class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+					<select  name="" id="age">
+						 
+					<option value="">年份</option>
+					<?php foreach($year_arr as $key=>$val){?>
+					<option value="<?php echo $val; ?>" ><?php echo $val ;?></option>
+					<?php }?>
+				 
+					</select>
+				</div>
+				<div  class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		    	<div  class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+					<select  name="" id="jidu">
+						<option value="">季度</option>
+						<option value="1">第一季度</option>
+						<option value="2">第二季度</option>
+						<option value="3">第三季度</option>
+						<option value="4">第四季度</option>
+					</select>
+			 	</div>
+				 <div  class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="audit">
+				 <span class="audit"><img name="0"  class="icon-a" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img   name="1" class="icon-b" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img> &nbsp;&nbsp;未审核</span>
+				 
+				 
+				 </div>
+			</div>
+		</form>
+		<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div id="xuanze"  class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img name="1" class="icon-3" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png" alt=""><img name="2" class="icon-4" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png" alt=""></div>
+		<select  class="col-lg-3 col-md-3 col-sm-3 col-xs-4" name="search_type" class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <option value="1">接受订单ID</option>
+            <option value="2">接受人ID</option>
+		</select>
+		<input id="text" type="text"  class="col-lg-3 col-md-2 col-sm-3 col-xs-4 search_name" placeholder="请输入ID" value="">
+		<div  class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<select  name="" id="ages">
+					<option value="">年份</option>
+					<?php foreach($year_arr as $key=>$val){?>
+					<option value="<?php echo $val; ?>" ><?php echo $val ;?></option>
+					<?php }?>
+				</select>
+			</div>
+			<div  class="col-lg-1 col-md-1 col-sm-31 col-xs-1"></div>
+		    <div  class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<select  name="" id="jidus">
+					<option value="">季度</option>
+					<option value="1">第一季度</option>
+					<option value="2">第二季度</option>
+					<option value="3">第三季度</option>
+					<option value="4">第四季度</option>
+				</select>
+			 </div>
+			 <div  class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="audits">
+				 <span class="audits"><img name="0"  class="icon-a" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img   name="1" class="icon-b" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img> &nbsp;&nbsp;未审核</span>
+			</div>
+			 <div  class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<button type="button"  class="btn btn-info search_submints" id="btn-btn1">查询</button>
+		</div>
+		<div class="s-btn">
+			<button type="button" id="btn-btn" class="btn btn-danger btn-lg">加入手动匹配列表</button>
+			<button type="button" id="quxiao" class="btn btn-defalut" data-toggle="modal" data-target="#myModal" style="margin-left:15px;">修改金额</button>
+			<button type="button" id="shuaxin1" class="btn btn-danger" style="margin-left:15px;">刷新</button>
+			<!--加入手动列表弹出框-->
+			<!-- Modal -->
+
+		</div>
+		</div>
+		<table class="table table-striped table-bordered" id="table1">
+			<tr>
+				<th>
+					全选&nbsp;<span><input type="checkbox" id="check">
+				</th>
+				<th>收款ID</th>
+				<th>收款人</th>
+				<th>收款人ID</th>
+				<th>收款金额</th>
+				<th>已匹配金额</th>
+				<th>提交时间</th>
+				<th class="dddd">金额差</th>
+			</tr>
+			<tbody class="list_text">
+
+			</tbody>
+			
+		</table>
+		<div style="text-align:center" class="col-lg-24 col-md-24 col-sm-24 col-mx-24">
+		<div  class="tcdPageCode"></div>
+		</div>
+	</div>
+		<div class="tck-cg">
+		<div class="tck-cg1">
+			<img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_14.png" alt="">
+			<p>加入手动匹配列表成功</p>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" id="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改金额</h4>
+      </div>
+      <div class="modal-body">
+        <span class="out">出局钱包剩余：</span><span class="sum">0</span>
+		<div class="jine"><span class="join">加入金额：</span><input class="import" type="text"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="tijiao" class="btn btn-primary">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/lq.datetimepick.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery.page.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/public.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/gonggo.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/search.js?{$Think.config.html_version}"></script>
+</body>
+
+</html>

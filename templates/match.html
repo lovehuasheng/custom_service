@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+	<title></title>
+	<link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/lq.datetimepick01.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/match.css?{$Think.config.html_version}">
+	<link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		  <!-- 头部公用样式 -->
+		<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24" id="clude">
+			<div class="t-img"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/alalei.jpg" alt=""></div>
+			<span class="cuo"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_close.png" alt="" style="display:block;width:30px;"></span>
+		</div>
+       <div class="row" id="s-row">
+			<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon6.png" alt=""><span class="weizhi">&#x3000;当前位置：</span><span class="s-span">&#x3000;我的工作&gt;&gt;查询已匹配信息</span></div>
+		</div>
+		<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<select name="search_type">
+                  <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                  <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                  <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接收订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+				  <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接收人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <select>
+			<input id="text" type="text"class="search_name" placeholder="请输入ID">
+            <span class="match-span">匹配日期：</span>
+			<input type="text" id="form-control" id="datepicker" class="datetimepicker3" value="" />
+			<select  name="" id="ages">
+				<option value="">年份</option>
+				<option value="2017" >2017</option>
+				<option value="2016" >2016</option>
+			</select>
+			<select  name="" id="jidus">
+				<option value="">季度</option>
+				<option value="1">第一季度</option>
+				<option value="2">第二季度</option>
+				<option value="3">第三季度</option>
+				<option value="4">第四季度</option>
+			</select>
+
+	
+			<button id="t-btn"class="search_submints">查询</button>
+			<span class="tishi">默认查询当前季度</span>
+		</div>
+        <div class="col-lg-21 col-md-21 col-sm-20 col-xs-20"></div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-top:26px;"><button id="shuaxin" type="button" class="btn btn-danger" style="margin-left:40px;">刷新</button></div>
+        <!--表格-->
+        <div class="row" id="t-table">
+			<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24">
+				<table class="table table-striped table-bordered" id="table">
+					<tbody>
+					<tr>
+						<th colspan="4" style="text-align:center;background-color:#2FA5E8;">提供人</th>
+						<th colspan="3" style="text-align:center;background-color:#2FA5E8;">接受人</th>
+						<th rowspan="2" style="text-align:center;background-color: #4d7084;">匹配金额</th>
+						<th rowspan="2" style="text-align:center;background-color: #4d7084;">匹配时间</th>
+						<th rowspan="2" style="text-align:center;background-color: #4d7084;">状态</th>
+						<th rowspan="2" colspan="3" style="text-align:center;background-color: #4d7084;">操作</th>
+					</tr>
+					<tr>
+						
+						<th style="background-color:#2FA5E8;">订单ID</th>
+						<th style="background-color:#2FA5E8;">姓名</th>
+						<th style="background-color:#2FA5E8;">用户ID</th>
+						<th style="background-color:#2FA5E8;">提供总金额</th>
+						<th style="background-color:#2FA5E8;">订单ID</th>
+						<th style="background-color:#2FA5E8;">姓名</th>
+						<th style="background-color:#2FA5E8;">用户ID</th>
+
+					</tr>
+					</tbody>
+					<tbody class="list_text">
+                                        
+                	 </tbody>
+				</table>
+				 <div class="col-lg-4 col-md-4 col-sm-4 col-mx-4"></div>
+                 <div style="text-align:center" class=" col-lg-16 col-md-16 col-sm-16 col-mx-16 tcdPageCode"></div>
+            	 <div class="col-lg-4 col-md-4 col-sm-4 col-mx-4"></div>
+			</div>
+		</div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">撤销假图</h4>
+			</div>
+			<div class="modal-body">
+				<p><span>确定撤销：</span>&#x3000;<span class="shi"><img name="1" class="icon-1"  src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img name="2" class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><span>&nbsp;是</span></p>
+                <p>*撤销打款截图，【已打款】变成【未打款】</p>
+                
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="tijiao" class="btn btn-primary">提交</button>
+                
+			</div>
+		</div>
+	</div>
+</div>
+  <div class="modal fade" id="hyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">还原订单</h4>
+			</div>
+			<div class="modal-body">
+				<p><span>确定还原：</span>&#x3000;<span class="shi"><img name="1" class="icon-1"  src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><span class="s-f"><img name="2" class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img></span><span>&nbsp;是</span></p>
+                <p>*解除双方匹配关系，可以进行二次匹配</p>
+                <section><span>加入手动匹配列表:&#x3000;<span></span><span class="shoukuan"><img class="icon-1" name="1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img  class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img>&#x3000;是</span>&#x3000;&#x3000;
+				<span class="fou"><img name="2" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img>&#x3000;否</span>
+                </section>
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="m-button" class="btn btn-primary">提交</button>
+			</div>
+		</div>
+	</div>
+</div>
+  <div class="modal fade" id="fhModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">撤单封号</h4>
+			</div>
+			<div class="modal-body">
+				<p><span>确定撤单：</span>&#x3000;<span class='show_icon'><img name="1" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></span><span>&nbsp;是</span></p>
+				<!--</img><img name="2"  class="icon-2" src="/static/images/icon_8.png"></img>-->
+                <p>*解除双方匹配关系，被封号的一方订单消失，<br>
+				&#x3000;&#x3000;不被封号可以进行二次匹配</p>
+                <section  style="margin-top:38px;" class="sec">
+					&#x3000;&#x3000;<span class="t-tgr"><img name="1" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img></span><span>&nbsp;提供人封号</span>&#x3000;&#x3000;
+					<span class="t-jsr"><img name="2" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></span></img><span>&nbsp;接收人封号</span>
+                </section>
+                <section style="margin-top:35px;"><span>加入手动匹配列表:&#x3000;<span class="t-skf"><img name="1" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img>
+                </span><span>&nbsp;是</span></span>&#x3000;<span class="t-skf1"><img  name="2" class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img><img class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img>
+                </span><span>&nbsp;否</span></span>
+                </section>
+			</div>
+			<div class="modal-footer">
+				<button style="margin-bottom:30px;" type="button" id="match-button1" class="btn btn-primary">提交</button>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/selectUi.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/lq.datetimepick.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/public.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/gonggo.js?{$Think.config.html_version}"></script>
+	<script src="http://img01.shanxinhui.com.cn/kefu/static/js/match.js?{$Think.config.html_version}"></script>
+</body>
+
+</html>

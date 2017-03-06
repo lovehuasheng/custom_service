@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>超级管理员—我的首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- TODO 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- TODO 移动设计优先(响应式) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/home.css?{$Think.config.html_version}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row border_bottom header_row ">
+        <div class=" header_title"><span class="img_01"></span><span> 当前位置：</span><span class="s-span">工作开始&gt;&gt;我的首页</span></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 statistics">
+            <span>昨日工作统计 :</span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>审核工作总量(人)</td>
+                        <td>一次通过审核(人)</td>
+                        <td>二通过审核(人)</td>
+                        <td>三次通过审核(人)</td>
+                        <td class="work_time_flag hide">有效工作时间</td>
+                    </tr>
+                </thead>
+                <tbody id="verify_data">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 dynamic_state hide">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <span>最新动态 :</span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 more">
+                    <a href="{:url('statistics/templet/more')}" >更多&gt;&gt;</a>
+                </div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"> 没有操作记录 </li>
+            </ul>
+        </div>
+    </div>
+    <div class="choice col-lg-12 col-md-12 col-sm-12">
+        <select class="select_data">
+            <option value="0">全部</option>
+            <option value="1">客服1</option>
+            <option value="2">客服2</option>
+            <option value="3">客服3</option>
+            <option value="4">客服4</option>
+            <option value="5">客服5</option>
+            <option value="6">客服6</option>
+        </select>
+    </div>
+    <div class="can col-lg-12 col-md-12 col-sm-12">
+        <canvas id="myChart" width="1250" height="300">
+            您的浏览器不支持canvas绘图！
+        </canvas>
+        <h3>审核客服日工作情况表</h3>
+    </div>
+     <div class="can col-lg-12 col-md-12 col-sm-12 verify_chart hide">
+        <canvas id="myChart1" width="1250" height="300">
+            您的浏览器不支持canvas绘图！
+        </canvas>
+        <h3>会员审核日通过情况分布表</h3>
+    </div>
+</div>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/Chart.bundle.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/home.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/error.js?{$Think.config.html_version}"></script>
+</body>
+</html>

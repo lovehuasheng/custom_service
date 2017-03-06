@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color: #5bc0de;
+    border:0;
+}
+a:hover{
+   text-decoration: none;
+   cursor: pointer;
+   color: #5bc0de;
+}
+li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+textarea{
+    resize:none;
+    overflow-y:scroll; 
+    font-size: 16px;
+    line-height:20px;
+}
+#shurukuang{
+  font-size: 22px;
+}
+.tiaozhuan{
+    border-radius: 5px;
+    width: 50px;
+    height: 28px;
+    padding: 5px 5px;
+    border: 1px solid gray;
+     margin-left: 8px;
+     color: #428BCA;
+}
+#fenye{
+    width: 36px;
+    height: 28px;
+    padding: 0 3px;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+.dangqian,.zuida{
+    color: #333;
+    margin-left: 8px;
+}
+
+/*媒体查询*/ 
+@media (max-width:1400px){
+  #left>.modal-body,#erji>.modal-body{
+    text-align: center;
+  }
+  #xinzeng>.modal-dialog{
+    width: 1200px ;
+  }
+  #bianji>.modal-dialog{
+    width: 1200px ;
+  }
+  #erji .modal-body{
+    text-align: center;
+  }
+ #erji>.modal-content,#left>.modal-content{
+    width:1200px;
+  }
+  textarea{
+    width: 1169px;
+  }
+  #erji>.modal-dialog,#left>.modal-dialog{
+    width: 1240px;
+  }
+    .row{
+    font-size: 20px;
+    margin-top: 26px;
+  }
+  .container-fluid .header_row{
+      margin-top: 13px;
+  }
+  .s-span{
+    color: #9a9a9a;
+  }
+  .border_bottom{
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 10px;
+  }
+  .img_01{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: url(../images/jingling.png) 84px 0px;
+      position: relative;
+      top:6px;
+  }
+  .n-span{
+    position: relative;
+    top: -48px;
+  }
+
+  .ipt{
+      margin-top: 20px;
+  }
+  .look{
+      cursor: pointer;
+      color: #31b0d5;
+  }
+  .caozuo{
+      display: inline-block;
+      color: #31b0d5;
+      cursor: pointer;
+  }
+  .img_02{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      background: url(../images/jingling.png) 0px 0px;
+      top:6px;
+  }
+  .table{
+      margin-top: 20px;
+  }
+  .table-bordered > tbody > tr > th{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fdffff;
+    height: 40px;
+    line-height: 40px;
+    padding:0;
+  }
+  .table-bordered > tbody > tr > td{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fdffff;
+    padding: 0;
+    height: 34px;
+    line-height: 34px;
+    vertical-align:middle;
+  }
+  .table-bordered > tbody > tr > td p{
+    margin-bottom:0px;
+  }
+  .table-bordered > tbody > tr > td{
+    color: #333;
+  }
+  .table-bordered > tbody > tr > th{
+    background-color: #4d7086;
+  }
+  .header_title{
+      margin-left: 50px;
+  }
+  .modal-header{
+      text-align: center;
+      background: #4d708b;
+      color: #fff; 
+  }
+  .modal-header h4{
+      font-size: 24px;
+  }
+  /*弹出框距离顶部样式*/
+  .modal-body{
+      font-size: 20px;
+      line-height: 50px;
+  }
+  .modal-body input{
+      height: 30px;
+  }
+  .modal-body .btn1{
+      margin-left: 125px;
+  }
+  .center{
+    text-align: center;
+  }
+  .btn3{
+    margin-left: 0;
+  }
+  #left,#erji{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 648px;
+    height: 375px;
+    background: #fff;
+    top:6%;
+    left:48%;
+    margin-left: -274px;
+    border:1px solid #ccc;
+  }
+  #left input,#erji input{
+    height: 40px;
+  }
+  #left .left_btn{
+    margin-bottom: 100px;
+    margin-top: 25px;
+  }
+  .shandow{
+    display: none;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    opacity: .3;
+    background: #ccc;
+    z-index: 666;
+  }
+  #shanchu .modal-body{
+    text-align: center;
+    margin-left: 0;
+  }
+  .img{
+    background: url("../images/jingling.png") 225px 0px;
+  }
+  
+}
+
+
+/*大于1400px时的效果*/
+@media (min-width:1401px){
+   #left>.modal-body,#erji>.modal-body{
+    text-align: center;
+  }
+   textarea{
+    width:1200px;
+  }
+  .modal-dialog{
+    width: 1240px;
+  }
+  #shanchu>.modal-dialog{
+    width: 600px;
+  }
+  .modal{
+    width: 100%;
+  }
+    .row{
+    font-size: 20px;
+    margin-top: 26px;
+  }
+  .container-fluid .header_row{
+      margin-top: 13px;
+  }
+  .s-span{
+    color: #9a9a9a;
+  }
+  .border_bottom{
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 10px;
+  }
+  .img_01{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: url(../images/jingling.png) 84px 0px;
+      position: relative;
+      top:6px;
+  }
+  .modal-body{
+    font-size: 18px;
+  }
+  .ipt{
+      margin-top: 20px;
+  }
+  .look{
+      cursor: pointer;
+      color: #31b0d5;
+  }
+  .caozuo{
+      display: inline-block;
+      color: #31b0d5;
+      cursor: pointer;
+  }
+  .img_02{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      background: url(../images/jingling.png) 0px 0px;
+      top:6px;
+  }
+  .table{
+      margin-top: 20px;
+  }
+  .table-bordered > tbody > tr > th{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fdffff;
+    height: 50px;
+    line-height: 50px;
+    padding:0;
+  }
+  .table-bordered > tbody > tr > td{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fdffff;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+   vertical-align:middle;
+  }
+  .table-bordered > tbody > tr > td p{
+    margin-bottom:0px;
+  }
+  .table-bordered > tbody > tr > td{
+    color: #333;
+  }
+  .table-bordered > tbody > tr > th{
+    background-color: #4d7086;
+  }
+  .header_title{
+      margin-left: 50px;
+  }
+  .modal-header{
+      text-align: center;
+      background: #4d708b;
+      color: #fff; 
+  }
+  .modal-header h4{
+      font-size: 24px;
+  }
+  /*弹出框距离顶部样式*/
+  .modal-body{
+      font-size: 20px;
+      line-height: 50px;
+  }
+  .modal-body input{
+      height: 30px;
+  }
+  .modal-body .btn1{
+      margin-left: 125px;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .btn3{
+    margin-left: 0;
+    margin-top: 36px;
+  }
+
+  #left,#erji{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 648px;
+    height: 300px;
+    background: #fff;
+    top:6%;
+    left:48%;
+    margin-left: -274px;
+    border:1px solid #ccc;
+  }
+  #left input,#erji input{
+    height: 40px;
+  }
+  #left .left_btn{
+    margin-bottom: 100px;
+    margin-top: 25px;
+  }
+  .shandow{
+    display: none;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    opacity: .3;
+    background: #ccc;
+    z-index: 666;
+  }
+  #shanchu .modal-body{
+    text-align: center;
+    margin-left: 0;
+  }
+  .img{
+    background: url("../images/jingling.png") 225px 0px;
+  }
+}
+.s-cuo{
+  width: 20px;
+  height: 20px;
+}
+
+
+

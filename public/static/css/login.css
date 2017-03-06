@@ -1,0 +1,191 @@
+body{
+  line-height: 1;
+}
+.container-fluid{
+    padding: 0;
+    min-width:1350px;
+    max-width: 1903px;
+    position:relative;
+    max-height: 990px;
+    min-height: 700px;
+}
+.content_bg{
+    position:relative;
+}
+.content_c{
+    position: absolute;
+    top:24%;
+    left: 51%;
+    background-color: #fff;
+}
+.tupian1{
+    margin-top: 10px;
+}
+.tupian2{
+    margin-top:10px ;
+    margin-bottom:20px;
+}
+.tupian2 img{
+    margin-left: 70px;
+}
+.tupian3{
+    position:absolute;
+    top:-9%;
+    left:82%;
+}
+.form-horizontal .form-group .tupian2{
+    margin-left: 20px;
+}
+.btn{
+    background-color: #FF8000;
+    color:#fff;
+    margin-left:32%;
+    margin-bottom:1%;
+    margin-top: 20px;
+    width:100px;
+}
+.form-group {
+    margin-bottom: 2px;
+}
+.row{
+  margin:0;
+}
+/* 重置*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*容器设置*/
+#container {
+  counter-reset: counterA;
+}
+
+/*布局实现*/
+div.row {
+  position: relative;
+  counter-increment: counterA;
+  /*设置背景色，随机颜色*/
+}
+div.row label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-left: 15%;
+  margin-top: 30px;
+}
+  
+div.row label input {
+  width: 70%;
+  height: 25px;
+  line-height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  color: #377D6A;
+  padding: 0px 10px;
+  border-radius: 4px;
+  /*text-indent: 38px;*/
+ /* transition: all .3s ease-in-out;*/
+}
+div.row label input ::-webkit-input-placeholder {
+  color: transparent;
+}
+div.row label input + span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  background: #7AB893;
+  display: inline-block;
+  padding: 7px 4px;
+  /*transform-origin: left center;
+  transform: perspective(300px);
+  transition: all .3s ease-in-out;*/
+  border-radius: 4px 0 0 4px;
+}
+div.row label .verify{
+	width:24%;
+}
+div.row label  .btn_verify{
+	  width: 35%;
+    margin-left: 10px;
+    display: inline-block;
+    background: #ccc;
+    height: 25px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 27px;
+    font-size: 12px;
+}
+div.row label  .btn_verify1{
+	width: 28%;
+    margin-left: 27px;
+    display: inline-block;
+    background: rgba(255,255,255,.1);
+    height: 25px;
+    padding-top: 5px;
+    border-radius: 4px;
+	position:absolute;
+	left:108px;
+	top:0;
+	z-index:10;
+}
+/*div.row label input:focus,
+div.row label input:active {
+  text-indent: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+div.row label input:focus ::-webkit-input-placeholder,
+div.row label input:active ::-webkit-input-placeholder {
+  color: #f00;
+}
+div.row label input:focus + span,
+div.row label input:active + span {
+  background: #478560;
+}
+div.row:nth-child(1) input + span:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  border: 5px solid #000;
+  border-color: #478560 transparent transparent transparent;
+  transition: all .3s;
+  opacity: 0;
+}
+div.row:nth-child(1) input:focus + span,
+div.row:nth-child(1) input:active + span {
+  padding: 3px 10px;
+  border-radius: 6px;
+  transform: translateY(-150%);
+}
+div.row:nth-child(1) input:focus + span:before,
+div.row:nth-child(1) input:active + span:before {
+  opacity: 1;
+}*/
+@media screen and (max-width: 1500px){
+	div.row label .verify{
+	     width:30%;
+  }
+  div.row label  .btn_verify{
+  	  width: 30%;
+      margin-left: 10px;
+      display: inline-block;
+      background: #ccc;
+      height: 25px;
+      border-radius: 4px;
+      color:#fff;
+      text-align: center;
+      line-height: 25px;
+  }
+    div.row label {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 30px;
+  }
+}

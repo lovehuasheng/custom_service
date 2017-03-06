@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>客服审核</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- TODO 兼容高速浏览模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- TODO 移动设计优先(响应式) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/compile.css?{$Think.config.html_version}">
+</head>
+<body>
+<div class="container-fluid">
+    <!--TODO 主体内容-->
+    <div class="row border_bottom header_row ">
+        <div class=" header_title"><span class="img_01"></span><span> 当前位置：</span><span class="s-span">我的工作&gt;&gt;工作区</span></div>
+    </div>
+    <div class="col-lg-11 col-md-11 col-sm-11 import">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <p class="p1 col-lg-6 col-md-6 col-sm-6">
+                <label> <span class="sun_02"></span>会&nbsp;员&nbsp;账&nbsp;号 : <input type="text" class="username sun_01"></label>
+            </p>
+            <p class="p1 col-lg-6 col-md-6 col-sm-6">
+                <label><span class="sun_02"></span>姓名 : <input type="text" class="name sun_01"></label>
+            </p>
+            <p class="p1 col-lg-6 col-md-6 col-sm-6">
+                <label><span class="sun_02"></span>身份证号码 : <input type="text" class="card_id sun_01"></label>
+            </p>
+            <p class="p1 col-lg-6 col-md-6 col-sm-6">
+                <label><span class="sun_02"></span>微信 : <input type="text"  class="weixin_account sun_01"></label>
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 p2">
+            <p class="p1 col-lg-6 col-md-6 col-sm-6">
+                <label><span class="sun_02"></span>手机号码 : <input type="text" class="phone sun_01"></label>
+            </p>
+            <p class="p1 col-lg-6 col-md-6 col-sm-6 ">
+                <label><span class="sun_02"></span>支付宝 : <input type="text" class="alipay_account sun_01" ></label>
+            </p>
+            <p class=" seek col-lg-6 col-md-6 col-sm-6">
+                <button type="button" class="btn btn-primary sousuo">搜索</button>
+                <button type="button" class="btn btn-primary reset">重置</button>
+            </p>
+        </div>
+        <div class="shuxin">
+            <button type="button" class="btn btn-danger">刷新</button>
+        </div>
+    </div>
+    <div class=" row gezi">
+        <div class="table_list1">
+            <table class="table table-striped ">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>会员账号</th>
+                    <th>姓名</th>
+                    <th>激活状态</th>
+                    <th>审核状态</th>
+					<th colspan=3>操作</th>
+					 <th>更新状态</th>
+                    <th>资料更新时间</th>
+                    <th>注册时间</th>
+                </tr>
+                </thead>
+                <tbody class="tbody1">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--TODO 通用弹出框-->
+    <div class="modal fade" id="common_temp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel4">通用</h4>
+                </div>
+                <div class="modal-body ">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+	<!--End-->
+</div>
+</body>
+</html>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+<script src="http://img01.shanxinhui.com.cn/kefu/static/js/compile.js?{$Think.config.html_version}"></script>
+<script type="text/html" id="tr_temp">
+	<tr flag="{user_id}">
+		<td>{user_id}</td>
+		<td>{username}</td>
+		<td>{name}</td>
+		<td>{_status}</td>
+		<td>{_verify}</td>
+		<td><span flag="redact_btn">编辑</span></td>
+		<td><span flag="verify_btn">审核</span></td>
+		<td><span flag="inform_btn" class="message">通知</span></td>
+		 <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+		<td>{update_time}</td>
+		<td>{create_time}</td>
+	</tr>
+</script>
+<!--编辑-->
+<script type="text/html" id="redact_temp">
+	<p>会员账号:<span>xioming</span><b style="font-weight:normal;font-size:12px;margin-left:20px;color:#ccc;">(默认显示，不可修改)</b></p>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<span class="spa col-lg-2 col-md-2 col-sm-2 col-xs-2">姓&nbsp;&nbsp;名: </span><input type="text" class="ipt_01 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<span class="spa col-lg-3 col-md-3 col-sm-3 col-xs-3">手机号码: </span><input type="text" class="ipt_02 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="s1">
+		<span class="spa col-lg-2 col-md-2 col-sm-2 col-xs-2">支付宝: </span><input type="text" class="ipt_04 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<span class="spa col-lg-3 col-md-3 col-sm-3 col-xs-3">电子邮件: </span><input type="text" class="ipt_03 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<span class="spa col-lg-2 col-md-2 col-sm-2 col-xs-2">微&nbsp;&nbsp;信: </span><input type="text" class="ipt_05 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<span class="spa col-lg-3 col-md-3 col-sm-3 col-xs-3">身份证号: </span><input type="text" class="ipt_06 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<span class="spa col-lg-2 col-md-2 col-sm-2 col-xs-2">开户行: </span><input type="text" class="ipt_07 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<span class="spa col-lg-3 col-md-3 col-sm-3 col-xs-3">银行账户: </span><input type="text" class="ipt_08 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	</div>
+	<button type="button" class="btn btn-danger" id="tianjia">添加备注</button>
+	<div class="beizhu">
+		<div class="beizhu_1">
+			<span>备注一:</span><textarea rows="2" cols="30"></textarea>
+		</div>
+		<div class="beizhu_1">
+			<span>备注二:</span><textarea rows="2" cols="30"></textarea>
+		</div>
+		<div class="beizhu_1">
+			<span>备注:</span><textarea rows="2" cols="30"></textarea>
+		</div>
+	</div>
+	<br>
+	<button type="button" class="btn btn-info redact">提交</button>
+</script>
+<!--审核-->
+<script type="text/html" id="verify_temp">
+	<div class="form-group " >
+	<div class="control-label">
+	<label>会&nbsp;&nbsp;员&nbsp;&nbsp;账&nbsp;&nbsp;号 : </label><span>{username}</span>
+	</div>
+	<div class="control-label">
+	<label >当前审核状态 : </label><span>{_verify}</span>
+	</div>
+	<div class="tongg">
+	<label class="checkbox-inline "><span class="active" flag="1"></span>通过</label>
+	<label class="checkbox-inline"><span flag="2"></span >不通过</label>
+	</div>
+	</div>
+	<button type="button" class="btn btn-info present" flag="{user_id}">提交</button>
+</script>
+<!--通知-->
+<script type="text/html" id="inform_temp">
+	<div class="huiyuan">
+	<label>会员号 : </label><span>{username}</span>
+	</div>
+	<div class="user">
+	<label>姓名 : </label><span>{name}</span>
+	</div>
+	<div class="inform">
+		<div class="zhangh1" flag="1">
+			<label><span class="img"></span>账号信息 : </label>
+			<div>亲爱的会员，您的资料审核未通过！请尽快登陆会员系统进行资料完善和修改。</div>
+		</div>
+		<br>
+		<div class="zhangh2" flag="2">
+			<label><span></span>身份验证 : </label>
+			<div>亲爱的会员，您的资料审核未通过！请尽快登陆会员系统进行资料完善和修改。</div>
+		</div>
+	</div>
+	<button type="button" class="btn btn-primary send">发送</button>
+</script>

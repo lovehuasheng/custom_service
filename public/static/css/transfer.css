@@ -1,0 +1,90 @@
+.container-fluid .header_row{
+    margin-top: 13px;
+}
+.s-span{
+  color: #9a9a9a;
+}
+.border_bottom{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.img_01{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/jingling.png) 84px 0px;
+    position: relative;
+    top:6px;
+}
+#s-row{
+    margin-top: 26px;
+    border-bottom: 1px solid #e5e5e5;
+     padding-bottom: 10px;
+}
+.row{
+  font-size: 20px;
+}
+.s-spans{
+  color: #9a9a9a;
+}    
+#leixing{
+    padding: 5px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+}
+
+#text{
+    width: 160px;
+    line-height: 28px;
+    border-radius:5px;
+    border:1px solid #9a9a9a;
+    margin-left: 20px;
+    padding: 2px;
+}
+/*#clude{
+    margin-top: 20px;
+}*/
+.record_times{
+    margin-left: 15px;
+    font-size: 16px;
+}
+/*.start,.end{
+    padding: 5px;
+}*/
+#t-btn{
+    width: 80px;
+    line-height: 28px;
+    border-radius:5px;
+    background-color:#2fa5e8;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 26px;
+    margin-left: 20px;
+    border: 1px solid #2fa5e8;
+    display: inline-block;
+
+}
+.current,.current,.amount,.amounts{
+    font-size: 17px;
+}
+.amount{
+    margin-left: 20px;
+}
+#content{
+    margin-top: 29px;
+}
+.table-bordered > tbody > tr > th{
+    vertical-align:center;
+    text-align: center;
+    background-color: #2fa5e8;
+    font-size: 15px;
+    color: #fff;
+}
+.table-bordered > tbody > tr > td{
+    
+    font-weight: 400;
+    text-align: center;
+}
+#table1{
+    margin-top: 15px;
+}

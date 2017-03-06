@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/css/bootstrap.min.css?{$Think.config.html_version}" rel="stylesheet">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/timeout.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/pageCode.css?{$Think.config.html_version}">
+    <link rel="stylesheet" href="http://img01.shanxinhui.com.cn/kefu/static/css/reset.css?{$Think.config.html_version}">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 头部公用样式 -->
+    <div class="row" id="s-row">
+        <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24"><img src="http://img01.shanxinhui.com.cn/kefu/static/images/icon6.png" alt=""><span class="weizhi">&#x3000;当前位置：</span><span class="s-span">&#x3000;我的工作&gt;&gt;查询付款超时</span></div>
+    </div>
+    <!--<div class="col-lg-24 col-md-24 col-sm-24 col-xs-24" id="search">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+         <select  name="" id="age">
+            <option value="">年份</option>
+            <option value="2017" >2017</option>
+            <option value="2016" >2016</option>
+        </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <select  name="" id="jidu">
+            <option value="">季度</option>
+            <option value="1">第一季度</option>
+            <option value="2">第二季度</option>
+            <option value="3">第三季度</option>
+            <option value="4">第四季度</option>
+        </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <button id="jiduchaxun" class="jiduchaxun">查询</button>
+        </div>
+    </div>-->
+    <div class="col-lg-24 col-md-24 col-sm-24 col-xs-24">
+        <select name="search_type" id="leixing">
+                <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受订单ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受人ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+        <select>
+        <input id="text" type="text" class="search_name" placeholder="请输入ID" value="">
+        <select  name="" id="ages">
+            <option value="">年份</option>
+            <option value="2017" >2017</option>
+            <option value="2016" >2016</option>
+        </select>
+        <select  name="" id="jidus">
+            <option value="">季度</option>
+            <option value="1">第一季度</option>
+            <option value="2">第二季度</option>
+            <option value="3">第三季度</option>
+            <option value="4">第四季度</option>
+        </select>
+        <button id="t-btn" class="search_submint">查询</button>
+         <a href="/business/templet/show_tranfer_order">转单记录</a> 
+        <span class="tishi">默认查询当前季度</span>
+        </div>
+        <div class="row" id="t-row">
+            <div class="col-lg-14 col-md-14 col-sm-14 col-xs-14"></div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" class="btn btn-danger" id="pl-yanshi"  style="float:right"data-toggle="modal" data-target="#woModal" >批量延时</button>
+                <!--批量延时模态框-->
+                <div class="modal fade" id="woModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">延时</h4>
+                            </div>
+                            <div class="modal-body">
+                                <span class="t-time">延长时间</span><input type="text" id="ipt">
+                                <div id="timeout-date">
+                                    <ul>
+                                        <li>1小时</li>
+                                        <li>2小时</li>
+                                        <li>3小时</li>
+                                        <li>4小时</li>
+                                        <li>5小时</li>
+                                        <li>6小时</li>
+                                        <li>7小时</li>
+                                        <li>8小时</li>
+                                        <li>9小时</li>
+                                        <li>10小时</li>
+                                        <li>11小时</li>
+                                        <li>12小时</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="queding" class="btn btn-primary" >确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+            <div id="colll" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <button type="button" id="pl-jiedan" class="btn btn-danger"data-toggle="modal" data-target="#pljiedanModal">批量接单</button>
+                <!-- Modal -->
+                <div class="modal fade" id="jiedanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">接单</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="timeout-name"><span>原提供人姓名：</span><span class="tgr-name"></span></div>
+                                <div class="timeout-account"><span>接单提供人账号：</span><input type="text" class="inp" value=""></div>
+                                <div class="t-tj">
+                                    <span>原提供人是否封号：</span>
+                                    <span class="t-skf"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img name="1"  class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img>
+                                    </span><span>&nbsp;是</span></span>&#x3000;<span class="t-skf1"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img   name="2" class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img>
+                                    </span><span>&nbsp;否</span></span>
+                                </div>
+                                <div>
+                                    <span class="sxh_yuanyin">封号原因:</span>
+                                    <textarea name="" class="sxh_reasons" id="" cols="2" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="tijiao" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="pljiedanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">批量接单</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="timeout-name"><span>你选择批量接单：</span><span>共&#x3000;</span><span style="color:red" class="shu-l"></span><span>&#x3000;单</span></div>
+                                <div class="timeout-reason"><span>接单总金额：</span><span class="j-money"  style="color:red"></span><span>元</span></div>
+
+                                <div class="timeout-account"><span>接单提供人账号：</span><input type="text" class="inp" id="inp" value=""></div>
+                                <div class="t-tj">
+                                    <span>原提供人是否封号：</span>
+                                    <span class="t-skf2"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img name="1"  class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img>
+                                    </span><span>&nbsp;是</span></span>&#x3000;<span class="t-skf3"><img class="icon-1" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_8.png"></img><img   name="2" class="icon-2" src="http://img01.shanxinhui.com.cn/kefu/static/images/icon_9.png"></img>
+                                    </span><span>&nbsp;否</span></span>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="tijiao1" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <button type="button" class="btn btn-danger " id="shuaxin" style="float:right">刷新</button>
+            </div>
+        </div>
+        <div class="row" id="t-table">
+            <form id="myForm">
+                <table class="table table-striped table-bordered" id="table1">
+                    <tbody>
+                    <tr>
+                        <th colspan="5" style="text-align:center;">提供人</th>
+                        <th rowspan="2" style="text-align:center" >不打款原因</th>
+                        <th colspan="3" style="text-align:center">接受人</th>
+                        <th rowspan="2" style="text-align:center;background-color: #4d7084;  vertical-align:hidden;">匹配金额</th>
+                        <th rowspan="2" style="text-align:center;background-color: #4d7084;  vertical-align:hidden;">匹配时间</th>
+                        <th rowspan="2" style="text-align:center;background-color: #4d7084;  vertical-align:hidden;">付款倒计时</th>
+                        <th rowspan="2" colspan="2" style="background-color: #4d7084;  vertical-align:hidden;">操作</th>
+                    </tr>
+                    <tr>
+                        <th style="padding-left:0">全选&nbsp;<input type="checkbox" name="" id="check"></th>
+                        <th>订单ID</th>
+                        <th>姓名</th>
+                        <th>用户ID</th>
+                        <th>提供总金额</th>
+                        <th>订单ID</th>
+                        <th>姓名</th>
+                        <th>用户ID</th>
+                    </tr>
+                    </tbody>
+                    <tbody class="list_text">   
+                    </tbody>
+                </table>
+            </form>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-mx-4"></div>
+            <div style="text-align:center" class=" col-lg-16 col-md-16 col-sm-16 col-mx-16 tcdPageCode"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-mx-4"></div>
+        </div>
+    </div>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/bootstrap-24/js/bootstrap.min.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/layer/layer.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/public.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/gonggo.js?{$Think.config.html_version}"></script>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/timeout.js?{$Think.config.html_version}"></script>
+</body>
+</html>

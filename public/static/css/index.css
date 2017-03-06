@@ -1,0 +1,43 @@
+
+.container-fluid{
+    padding: 0;
+    min-width:1350px;
+    max-width: 1903px;
+    position:relative;
+    max-height: 990px;
+    min-height: 700px;
+}
+.content_bg{
+    position:relative;
+}
+.content_c{
+    position: absolute;
+    top:24%;
+    left: 51%;
+    background-color: #fff;
+}
+.tupian1{
+    margin-top: 30px;
+}
+.tupian2{
+    margin-top:10px ;
+    margin-bottom:20px;
+}
+.tupian2 img{
+    margin-left: 70px;
+}
+.tupian3{
+    position:absolute;
+    top:-9%;
+    left:82%;
+}
+.form-horizontal .form-group .tupian2{
+    margin-left: 20px;
+}
+.btn{
+    background-color: #FF8000;
+    color:#fff;
+}
+.form-group {
+    margin-bottom: 25px;
+}

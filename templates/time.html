@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://img01.shanxinhui.com.cn/kefu/static/js/jquery-1.12.3.js?{$Think.config.html_version}"></script>
+</head>
+<body>
+    <div>
+        还剩<span>点击</span>
+    </div>
+    <script>
+    $("div span").click(function(){   
+        var t = 172800;  //48小时 
+        setInterval(function(){
+            t--;
+            var d = parseInt((t/3600/24))
+            var h = parseInt((t/60/60)%24)
+            var m = parseInt((t/60)%60)
+            var s = parseInt(t%60)
+            $("div span").html(d+"天"+h+"小时"+m+"分"+s+"秒")
+        },1000)
+    })
+    
+        
+    </script> 
+</body>
+</html>
